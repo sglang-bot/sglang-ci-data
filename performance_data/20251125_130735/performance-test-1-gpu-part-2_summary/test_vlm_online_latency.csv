@@ -1,0 +1,68 @@
+created_at,run_number,pr_number,author,head_sha,median_e2e_latency_ms,url
+2025-11-01 02:10,42743,#1,Surya-Gunukula,795e98f8,9726.92,https://github.com/sgl-project/sglang/actions/runs/18989771215
+2025-11-01 01:00,42736,None,Yineng Zhang,0e429634,9740.51,https://github.com/sgl-project/sglang/actions/runs/18988890443
+2025-10-31 23:59,42728,None,Baizhou Zhang,4b74679b,9880.28,https://github.com/sgl-project/sglang/actions/runs/18988015558
+2025-10-31 21:25,42713,None,Yineng Zhang,3d49c701,9750.04,https://github.com/sgl-project/sglang/actions/runs/18985635387
+2025-10-31 19:06,42690,None,kaixih,c1043655,9809.02,https://github.com/sgl-project/sglang/actions/runs/18982624013
+2025-10-31 16:10,42660,#1,Neelabh Sinha,b57dc169,9778.87,https://github.com/sgl-project/sglang/actions/runs/18978356683
+2025-10-31 15:35,42652,#1,Xinyuan Tong,68486481,9698.10,https://github.com/sgl-project/sglang/actions/runs/18977456900
+2025-10-31 10:33,42629,None,Yang Kaiyong,fea3ee32,9689.32,https://github.com/sgl-project/sglang/actions/runs/18969914864
+2025-10-31 08:07,42599,None,Shangming Cai,f6062887,9717.18,https://github.com/sgl-project/sglang/actions/runs/18966569597
+2025-10-31 06:20,42569,None,Yuhong Guo,5a6284cf,9711.35,https://github.com/sgl-project/sglang/actions/runs/18964536280
+2025-10-31 05:55,42561,None,huanglei,3f3a9655,9728.55,https://github.com/sgl-project/sglang/actions/runs/18964101492
+2025-10-31 05:19,42553,None,ocss884,fa916bc1,9838.70,https://github.com/sgl-project/sglang/actions/runs/18963518339
+2025-10-31 03:06,42523,None,Jimmy,9d83f746,9735.77,https://github.com/sgl-project/sglang/actions/runs/18961432837
+2025-10-31 01:13,42493,None,Scott Lee,83ccf8f9,9666.43,https://github.com/sgl-project/sglang/actions/runs/18959664778
+2025-10-30 22:46,42462,None,Baizhou Zhang,938392b5,9733.45,https://github.com/sgl-project/sglang/actions/runs/18957132839
+2025-10-30 22:20,42455,None,Zhiqiang Xie,58042477,9886.69,https://github.com/sgl-project/sglang/actions/runs/18956629960
+2025-10-30 21:09,42432,None,Minglei Zhu,a5182996,9699.42,https://github.com/sgl-project/sglang/actions/runs/18955096249
+2025-10-30 18:46,42402,None,Liangsheng Yin,3d1a7d41,9794.40,https://github.com/sgl-project/sglang/actions/runs/18951651342
+2025-10-30 11:43,42333,None,bianfeng,5465da47,9727.05,https://github.com/sgl-project/sglang/actions/runs/18939487279
+2025-10-30 08:41,42303,None,huangtingwei,e40fca01,9837.82,https://github.com/sgl-project/sglang/actions/runs/18934796966
+2025-10-30 06:53,42265,None,Tianyu Guo,72c3fa5b,9749.56,https://github.com/sgl-project/sglang/actions/runs/18932428265
+2025-10-30 03:05,42220,None,Xuchun Shang,99d20ec0,9833.54,https://github.com/sgl-project/sglang/actions/runs/18928528883
+2025-10-29 20:19,42144,None,Baizhou Zhang,b58d252d,9687.64,https://github.com/sgl-project/sglang/actions/runs/18920984465
+2025-10-29 18:24,42121,None,Simo Lin,1d9a41c5,9705.12,https://github.com/sgl-project/sglang/actions/runs/18918189552
+2025-10-29 17:34,42113,None,Ying Sheng,76d13ffd,9672.13,https://github.com/sgl-project/sglang/actions/runs/18916896774
+2025-10-29 10:10,42030,None,Weiliang Liu,3ca55cdd,9682.15,https://github.com/sgl-project/sglang/actions/runs/18904282342
+2025-10-29 09:07,42022,None,Tianyu Guo,b07e2782,9845.17,https://github.com/sgl-project/sglang/actions/runs/18902628021
+2025-10-29 08:42,42015,None,Baizhou Zhang,6ccbf038,9711.61,https://github.com/sgl-project/sglang/actions/runs/18901971075
+2025-10-29 06:51,41985,#1,hlu1,42e1a72e,9781.25,https://github.com/sgl-project/sglang/actions/runs/18899573153
+2025-10-29 04:07,41962,None,luoyuan.luo,52e830f8,9691.03,https://github.com/sgl-project/sglang/actions/runs/18896770144
+2025-10-29 02:17,41931,None,Johnsonms,3c1b16fb,9719.74,https://github.com/sgl-project/sglang/actions/runs/18895003853
+2025-10-29 01:22,41909,None,0xNullPath,2409eacc,9758.79,https://github.com/sgl-project/sglang/actions/runs/18894115704
+2025-10-28 23:44,41886,None,fzyzcjy,fed3d921,9862.95,https://github.com/sgl-project/sglang/actions/runs/18892440030
+2025-10-28 22:33,41871,None,Wenxuan Tan,124d7f88,9613.30,https://github.com/sgl-project/sglang/actions/runs/18891133260
+2025-10-28 22:00,41863,None,Surya Gunukula,24268d64,9845.24,https://github.com/sgl-project/sglang/actions/runs/18890405126
+2025-10-28 20:58,41848,None,Scott Lee,0c7e859d,9676.00,https://github.com/sgl-project/sglang/actions/runs/18889017786
+2025-10-28 13:51,41772,None,fzyzcjy,aa11498c,9920.60,https://github.com/sgl-project/sglang/actions/runs/18877086887
+2025-10-28 12:55,41757,None,Liangsheng Yin,684c3991,9663.42,https://github.com/sgl-project/sglang/actions/runs/18875460298
+2025-10-28 07:46,41681,None,Yuhong Guo,312a0f54,9730.30,https://github.com/sgl-project/sglang/actions/runs/18867702560
+2025-10-28 07:35,41673,None,Yuhong Guo,e203cf5b,9830.51,https://github.com/sgl-project/sglang/actions/runs/18867476939
+2025-10-28 06:40,41658,#1,fzyzcjy,691c8534,9671.84,https://github.com/sgl-project/sglang/actions/runs/18866383106
+2025-10-28 04:04,41620,None,kaixih,28e9ac20,9788.58,https://github.com/sgl-project/sglang/actions/runs/18863717656
+2025-10-28 03:41,41613,None,luoyuan.luo,78ef2a68,9718.21,https://github.com/sgl-project/sglang/actions/runs/18863357863
+2025-10-28 03:14,41605,None,xuyongfei.xyf,abc792cc,9661.68,https://github.com/sgl-project/sglang/actions/runs/18862924203
+2025-10-28 02:17,41598,None,Yongfei Xu,1dae952c,9817.09,https://github.com/sgl-project/sglang/actions/runs/18861915565
+2025-10-28 01:03,41582,None,Siju Samuel,9e3829ef,9723.22,https://github.com/sgl-project/sglang/actions/runs/18860683514
+2025-10-27 23:32,41567,None,Xinyuan Tong,ef8b12aa,9803.08,https://github.com/sgl-project/sglang/actions/runs/18859052165
+2025-10-27 21:10,41537,None,Xinyuan Tong,8b067999,9793.51,https://github.com/sgl-project/sglang/actions/runs/18856025247
+2025-10-27 19:18,41522,None,Brayden Zhong,644e8d4e,9805.31,https://github.com/sgl-project/sglang/actions/runs/18853203362
+2025-10-27 17:02,41507,#1,Chunyuan WU,c11b34d5,9742.86,https://github.com/sgl-project/sglang/actions/runs/18849380667
+2025-10-27 16:01,41499,#1,Haichao Zhu,a8b91f6b,9657.77,https://github.com/sgl-project/sglang/actions/runs/18847535399
+2025-10-27 12:38,41476,None,Yuhong Guo,31e977b8,10066.16,https://github.com/sgl-project/sglang/actions/runs/18841231722
+2025-10-27 10:36,41461,None,Shangchuan Huang,ddd5c47f,10105.54,https://github.com/sgl-project/sglang/actions/runs/18838000384
+2025-10-27 09:02,41446,None,Yuan Luo,bce70848,9627.64,https://github.com/sgl-project/sglang/actions/runs/18835420209
+2025-10-27 08:30,41438,None,qichu,4feafe34,10056.14,https://github.com/sgl-project/sglang/actions/runs/18834615434
+2025-10-27 07:12,41423,None,Even Zhou,e162c61e,10103.01,https://github.com/sgl-project/sglang/actions/runs/18832842088
+2025-10-27 06:45,41416,#1,Joonchen Liau,f7dc2f33,10137.17,https://github.com/sgl-project/sglang/actions/runs/18832301206
+2025-10-27 06:31,41408,None,qichu,861b38ab,10179.98,https://github.com/sgl-project/sglang/actions/runs/18832025372
+2025-10-27 03:54,41378,None,Lifu Huang,c6ea792d,10187.21,https://github.com/sgl-project/sglang/actions/runs/18829299053
+2025-10-27 03:18,41370,None,Peng Zhang,69d006bf,10041.67,https://github.com/sgl-project/sglang/actions/runs/18828696443
+2025-10-27 02:49,41362,None,Brayden Zhong,ef596b03,10102.04,https://github.com/sgl-project/sglang/actions/runs/18828228387
+2025-10-27 01:49,41340,None,Qiaolin Yu,fecfc9cd,10153.33,https://github.com/sgl-project/sglang/actions/runs/18827299334
+2025-10-27 01:10,41332,None,blzheng,de6afbfe,10134.45,https://github.com/sgl-project/sglang/actions/runs/18826701618
+2025-10-27 00:47,41325,None,b8zhong,f643aaa6,10155.38,https://github.com/sgl-project/sglang/actions/runs/18826364846
+2025-10-26 19:52,41279,None,Chang Su,9bd754f7,10067.81,https://github.com/sgl-project/sglang/actions/runs/18822929867
+2025-10-26 17:41,41256,None,Roger Young,582452ff,10067.63,https://github.com/sgl-project/sglang/actions/runs/18821485401
+2025-10-26 14:12,41241,None,ykcombat,03dff85f,10210.86,https://github.com/sgl-project/sglang/actions/runs/18819115801
