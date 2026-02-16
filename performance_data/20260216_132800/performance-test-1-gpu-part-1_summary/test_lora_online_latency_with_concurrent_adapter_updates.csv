@@ -1,0 +1,15 @@
+created_at,run_number,pr_number,author,head_sha,median_e2e_latency_ms,median_ttft_ms,url
+2026-01-19 05:28,64245,None,BBuf,a037d429,2557.98,50.49,https://github.com/sgl-project/sglang/actions/runs/21126416072
+2026-01-19 04:55,64238,None,Qiaolin Yu,b5c6d872,2029.64,45.74,https://github.com/sgl-project/sglang/actions/runs/21125807367
+2026-01-19 02:50,64212,None,bingxche,64c0e4cf,2011.69,37.32,https://github.com/sgl-project/sglang/actions/runs/21123638948
+2026-01-19 00:52,64198,None,BBuf,7b42c3d7,2850.26,55.74,https://github.com/sgl-project/sglang/actions/runs/21121699324
+2026-01-18 20:46,64185,None,Lingjun Wen,084a2a8d,2006.47,38.92,https://github.com/sgl-project/sglang/actions/runs/21118345956
+2026-01-18 18:04,64179,#1,Jerry Ji,93433726,2123.09,41.06,https://github.com/sgl-project/sglang/actions/runs/21116220872
+2026-01-18 16:49,64172,None,Binyao Jiang,3c948481,2100.29,36.64,https://github.com/sgl-project/sglang/actions/runs/21115222496
+2026-01-18 12:16,64137,None,hzh0425,4c3cbfe1,1995.70,35.36,https://github.com/sgl-project/sglang/actions/runs/21111568696
+2026-01-18 04:41,64087,None,BBuf,b281ecb6,2007.19,39.76,https://github.com/sgl-project/sglang/actions/runs/21106152313
+2026-01-18 04:19,64081,None,Xinyuan Tong,610eb987,2242.67,45.36,https://github.com/sgl-project/sglang/actions/runs/21105908613
+2026-01-18 03:14,64074,None,Lingjun Wen,3e93328b,1892.08,37.55,https://github.com/sgl-project/sglang/actions/runs/21105146243
+2026-01-17 21:20,64048,None,shuwenn,fe8c79cf,2101.20,45.14,https://github.com/sgl-project/sglang/actions/runs/21101042811
+2026-01-17 18:08,64041,None,Yangmin Li,df6ae00b,2058.97,39.52,https://github.com/sgl-project/sglang/actions/runs/21098685167
+2026-01-17 16:44,64034,None,Brayden Zhong,c8f07e36,2629.49,52.58,https://github.com/sgl-project/sglang/actions/runs/21097600663
