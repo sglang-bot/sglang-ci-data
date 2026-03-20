@@ -1,25 +1,26 @@
 # Diffusion Cross-Framework Performance Dashboard
 
-*Generated: Mar 20 | Commit: `b4642ac`*
+*Generated: Mar 20 | Commit: `479be52`*
 
 ## Cross-Framework Performance Comparison
 
-| Model | Task | sglang (s) |
-|-------|------|---------|
-| FLUX.1-dev | text-to-image | **7.05** |
-| FLUX.2-dev | text-to-image | N/A |
-| Qwen-Image-2512 | text-to-image | **17.56** |
-| Qwen-Image-Edit-2511 | image-edit | **32.61** |
-| Z-Image-Turbo | text-to-image | **2.32** |
-| Wan2.2-T2V-A14B-Diffusers | text-to-video | N/A |
-| Wan2.2-TI2V-5B-Diffusers | text-image-to-video | N/A |
-| Wan2.2-I2V-A14B-Diffusers | image-to-video | N/A |
-| HunyuanVideo | text-to-video | N/A |
+| Model | sglang (s) |
+|-------|---------|
+| FLUX.1-dev | N/A |
+| FLUX.2-dev | N/A |
+| Qwen-Image-2512 | N/A |
+| Qwen-Image-Edit-2511 | N/A |
+| Z-Image-Turbo | **2.31** |
+| Wan2.2-T2V-A14B-Diffusers | **17.44** |
+| Wan2.2-TI2V-5B-Diffusers | N/A |
+| Wan2.2-I2V-A14B-Diffusers | N/A |
+| HunyuanVideo | **114.67** |
 
 ## SGLang Performance Trend (Last 7 Runs)
 
 | Date | Commit | flux1_dev_t2i_1024 (s) | flux2_dev_t2i_1024 (s) | qwen_image_2512_t2i_1024 (s) | qwen_image_edit_2511 (s) | zimage_turbo_t2i_1024 (s) | wan22_t2v_a14b_720p (s) | wan22_ti2v_5b_720p (s) | wan22_i2v_a14b_720p (s) | hunyuanvideo_t2v_480p (s) | Trend |
 |------|--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|-------|
+| Mar 20 | `479be52` | N/A | N/A | N/A | N/A | 2.31 | 17.44 | N/A | N/A | 114.67 |     :left_right_arrow:     |
 | Mar 20 | `b4642ac` | 7.05 | N/A | 17.56 | 32.61 | 2.32 | N/A | N/A | N/A | N/A | :arrow_down:     :arrow_down:     |
 | Mar 19 | `3d8690f` | 7.59 | N/A | N/A | N/A | 2.54 | N/A | N/A | N/A | N/A | — |
 
@@ -28,9 +29,9 @@
 ```mermaid
 xychart-beta
   title "Latency Trend — flux1_dev_t2i_1024"
-  x-axis ["Mar 19", "Mar 20"]
+  x-axis ["Mar 19 (3d8690f)", "Mar 20 (b4642ac)", "Mar 20 (479be52)"]
   y-axis "Latency (s)" 0 --> 9
-  line [7.59, 7.05]
+  line [7.59, 7.05, 0.00]
 ```
 
 *SGLang performance over time*
@@ -41,9 +42,9 @@ xychart-beta
 ```mermaid
 xychart-beta
   title "Latency Trend — flux2_dev_t2i_1024"
-  x-axis ["Mar 19", "Mar 20"]
+  x-axis ["Mar 19 (3d8690f)", "Mar 20 (b4642ac)", "Mar 20 (479be52)"]
   y-axis "Latency (s)" 0 --> 0
-  line [0.00, 0.00]
+  line [0.00, 0.00, 0.00]
 ```
 
 *SGLang performance over time*
@@ -54,9 +55,9 @@ xychart-beta
 ```mermaid
 xychart-beta
   title "Latency Trend — qwen_image_2512_t2i_1024"
-  x-axis ["Mar 19", "Mar 20"]
+  x-axis ["Mar 19 (3d8690f)", "Mar 20 (b4642ac)", "Mar 20 (479be52)"]
   y-axis "Latency (s)" 0 --> 21
-  line [0.00, 17.56]
+  line [0.00, 17.56, 0.00]
 ```
 
 *SGLang performance over time*
@@ -67,9 +68,9 @@ xychart-beta
 ```mermaid
 xychart-beta
   title "Latency Trend — qwen_image_edit_2511"
-  x-axis ["Mar 19", "Mar 20"]
+  x-axis ["Mar 19 (3d8690f)", "Mar 20 (b4642ac)", "Mar 20 (479be52)"]
   y-axis "Latency (s)" 0 --> 39
-  line [0.00, 32.61]
+  line [0.00, 32.61, 0.00]
 ```
 
 *SGLang performance over time*
@@ -80,9 +81,9 @@ xychart-beta
 ```mermaid
 xychart-beta
   title "Latency Trend — zimage_turbo_t2i_1024"
-  x-axis ["Mar 19", "Mar 20"]
+  x-axis ["Mar 19 (3d8690f)", "Mar 20 (b4642ac)", "Mar 20 (479be52)"]
   y-axis "Latency (s)" 0 --> 3
-  line [2.54, 2.32]
+  line [2.54, 2.32, 2.31]
 ```
 
 *SGLang performance over time*
@@ -93,9 +94,9 @@ xychart-beta
 ```mermaid
 xychart-beta
   title "Latency Trend — wan22_t2v_a14b_720p"
-  x-axis ["Mar 19", "Mar 20"]
-  y-axis "Latency (s)" 0 --> 0
-  line [0.00, 0.00]
+  x-axis ["Mar 19 (3d8690f)", "Mar 20 (b4642ac)", "Mar 20 (479be52)"]
+  y-axis "Latency (s)" 0 --> 21
+  line [0.00, 0.00, 17.44]
 ```
 
 *SGLang performance over time*
@@ -106,9 +107,9 @@ xychart-beta
 ```mermaid
 xychart-beta
   title "Latency Trend — wan22_ti2v_5b_720p"
-  x-axis ["Mar 19", "Mar 20"]
+  x-axis ["Mar 19 (3d8690f)", "Mar 20 (b4642ac)", "Mar 20 (479be52)"]
   y-axis "Latency (s)" 0 --> 0
-  line [0.00, 0.00]
+  line [0.00, 0.00, 0.00]
 ```
 
 *SGLang performance over time*
@@ -119,9 +120,9 @@ xychart-beta
 ```mermaid
 xychart-beta
   title "Latency Trend — wan22_i2v_a14b_720p"
-  x-axis ["Mar 19", "Mar 20"]
+  x-axis ["Mar 19 (3d8690f)", "Mar 20 (b4642ac)", "Mar 20 (479be52)"]
   y-axis "Latency (s)" 0 --> 0
-  line [0.00, 0.00]
+  line [0.00, 0.00, 0.00]
 ```
 
 *SGLang performance over time*
@@ -132,9 +133,9 @@ xychart-beta
 ```mermaid
 xychart-beta
   title "Latency Trend — hunyuanvideo_t2v_480p"
-  x-axis ["Mar 19", "Mar 20"]
-  y-axis "Latency (s)" 0 --> 0
-  line [0.00, 0.00]
+  x-axis ["Mar 19 (3d8690f)", "Mar 20 (b4642ac)", "Mar 20 (479be52)"]
+  y-axis "Latency (s)" 0 --> 138
+  line [0.00, 0.00, 114.67]
 ```
 
 *SGLang performance over time*
