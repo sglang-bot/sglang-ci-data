@@ -1,32 +1,32 @@
 # Diffusion Cross-Framework Performance Dashboard
 
-*Generated: Mar 22 | Commit: `ccd134b`*
+*Generated: Mar 26 | Commit: `2e65c27`*
 
 ## Cross-Framework Performance Comparison
 
-| Model | sglang (s) |
-|-------|---------|
-| FLUX.1-dev | **6.69** |
-| FLUX.2-dev | **22.58** |
-| Qwen-Image-2512 | **13.58** |
-| Qwen-Image-Edit-2511 | **29.97** |
-| Z-Image-Turbo | **1.96** |
-| Wan2.2-T2V-A14B-Diffusers | **16.10** |
-| Wan2.2-TI2V-5B-Diffusers | **62.17** |
-| Wan2.2-I2V-A14B-Diffusers | **10.04** |
+| Model | Risk | sglang (s) |
+|-------|------|---------|
+| FLUX.1-dev | ✅ | **6.77** |
+| FLUX.2-dev | ✅ | **22.75** |
+| Qwen-Image-2512 | ✅ | **13.31** |
+| Qwen-Image-Edit-2511 | ✅ | **29.84** |
+| Z-Image-Turbo | ✅ | **0.94** |
+| Wan2.2-T2V-A14B-Diffusers | ✅ | **16.06** |
+| Wan2.2-TI2V-5B-Diffusers | ✅ | **62.23** |
+| Wan2.2-I2V-A14B-Diffusers | ✅ | **10.04** |
 
 ## SGLang Performance Trend (Last 7 Runs)
 
 | Date | Commit | flux1_dev_t2i_1024 (s) | flux2_dev_t2i_1024 (s) | qwen_image_2512_t2i_1024 (s) | qwen_image_edit_2511 (s) | zimage_turbo_t2i_1024 (s) | wan22_t2v_a14b_720p (s) | wan22_ti2v_5b_720p (s) | wan22_i2v_a14b_720p (s) | Trend |
 |------|--------|---------|---------|---------|---------|---------|---------|---------|---------|-------|
+| Mar 26 | `2e65c27` | 6.77 | 22.75 | 13.31 | 29.84 | 0.94 | 16.06 | 62.23 | 10.04 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow: |
 | Mar 22 | `ccd134b` | 6.69 | 22.58 | 13.58 | 29.97 | 1.96 | 16.10 | 62.17 | 10.04 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow: |
 | Mar 22 | `5a307e5` | 6.70 | 22.62 | 14.09 | 30.14 | 2.01 | 16.13 | 62.20 | 10.04 | :left_right_arrow:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :left_right_arrow:  :arrow_up: |
 | Mar 21 | `9d2e930` | 6.77 | 22.77 | 13.71 | 30.39 | 1.93 | 16.14 | 62.15 | 9.03 | :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down: |
 | Mar 21 | `f4c05ad` | 7.25 | 23.89 | 14.66 | 33.42 | 2.04 | 19.25 | 70.19 | 10.04 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :arrow_down:    :left_right_arrow: |
 | Mar 20 | `57f358a` | 7.13 | 24.05 | 17.18 | 32.91 | 2.33 | N/A | N/A | 10.04 | :left_right_arrow:   :left_right_arrow:  :left_right_arrow:  :left_right_arrow:    |
 | Mar 20 | `0187c78` | 7.12 | N/A | 17.39 | 32.87 | 2.30 | N/A | N/A | N/A |     :left_right_arrow:    |
-| Mar 20 | `479be52` | N/A | N/A | N/A | N/A | 2.31 | 17.44 | N/A | N/A |     :left_right_arrow:    |
-| Mar 20 | `b4642ac` | 7.05 | N/A | 17.56 | 32.61 | 2.32 | N/A | N/A | N/A | -- |
+| Mar 20 | `479be52` | N/A | N/A | N/A | N/A | 2.31 | 17.44 | N/A | N/A | -- |
 
 ### Latency Trend: flux1_dev_t2i_1024
 
