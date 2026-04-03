@@ -1,24 +1,25 @@
 # Diffusion Cross-Framework Performance Dashboard
 
-*Generated: Apr 02 | Commit: `d7256eb`*
+*Generated: Apr 03 | Commit: `29d8e95`*
 
 ## Cross-Framework Performance Comparison
 
 | Model | Risk | sglang (s) |
 |-------|------|---------|
-| FLUX.1-dev | ✅ | **6.70** |
-| FLUX.2-dev | ✅ | **22.87** |
-| Qwen-Image-2512 | ✅ | **13.18** |
-| Qwen-Image-Edit-2511 | ✅ | **29.59** |
+| FLUX.1-dev | ✅ | **6.69** |
+| FLUX.2-dev | ✅ | **22.88** |
+| Qwen-Image-2512 | ✅ | **13.55** |
+| Qwen-Image-Edit-2511 | ✅ | **29.62** |
 | Z-Image-Turbo | ✅ | **0.93** |
-| Wan2.2-T2V-A14B-Diffusers | ✅ | **16.11** |
-| Wan2.2-TI2V-5B-Diffusers | ✅ | **62.20** |
-| Wan2.2-I2V-A14B-Diffusers | ⚠️ | **22.07** |
+| Wan2.2-T2V-A14B-Diffusers | ✅ | **16.57** |
+| Wan2.2-TI2V-5B-Diffusers | ✅ | **62.18** |
+| Wan2.2-I2V-A14B-Diffusers | ✅ | **21.07** |
 
 ## SGLang Performance Trend (Last 15 Runs)
 
 | Date | Commit | flux1_dev_t2i_1024 (s) | flux2_dev_t2i_1024 (s) | qwen_image_2512_t2i_1024 (s) | qwen_image_edit_2511 (s) | zimage_turbo_t2i_1024 (s) | wan22_t2v_a14b_720p (s) | wan22_ti2v_5b_720p (s) | wan22_i2v_a14b_720p (s) | Trend |
 |------|--------|---------|---------|---------|---------|---------|---------|---------|---------|-------|
+| Apr 03 | `29d8e95` | 6.69 | 22.88 | 13.55 | 29.62 | 0.93 | 16.57 | 62.18 | 21.07 | :left_right_arrow:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :arrow_down: |
 | Apr 02 | `d7256eb` | 6.70 | 22.87 | 13.18 | 29.59 | 0.93 | 16.11 | 62.20 | 22.07 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow: |
 | Apr 01 | `a315d74` | 6.70 | 22.89 | 13.30 | 29.70 | 0.92 | 16.20 | 62.19 | 22.08 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_up: |
 | Apr 01 | `a8759dd` | 6.70 | 22.88 | 13.19 | 30.10 | 0.93 | 16.16 | 62.20 | 21.07 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_up: |
@@ -32,8 +33,7 @@
 | Mar 22 | `ccd134b` | 6.69 | 22.58 | 13.58 | 29.97 | 1.96 | 16.10 | 62.17 | 10.04 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow: |
 | Mar 22 | `5a307e5` | 6.70 | 22.62 | 14.09 | 30.14 | 2.01 | 16.13 | 62.20 | 10.04 | :left_right_arrow:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :left_right_arrow:  :arrow_up: |
 | Mar 21 | `9d2e930` | 6.77 | 22.77 | 13.71 | 30.39 | 1.93 | 16.14 | 62.15 | 9.03 | :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down:  :arrow_down: |
-| Mar 21 | `f4c05ad` | 7.25 | 23.89 | 14.66 | 33.42 | 2.04 | 19.25 | 70.19 | 10.04 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :arrow_down:    :left_right_arrow: |
-| Mar 20 | `57f358a` | 7.13 | 24.05 | 17.18 | 32.91 | 2.33 | N/A | N/A | 10.04 | -- |
+| Mar 21 | `f4c05ad` | 7.25 | 23.89 | 14.66 | 33.42 | 2.04 | 19.25 | 70.19 | 10.04 | -- |
 
 ### Latency Trend: flux1_dev_t2i_1024
 
@@ -73,15 +73,6 @@
 ### Latency Trend: wan22_i2v_a14b_720p
 
 ![Latency Trend wan22_i2v_a14b_720p](https://raw.githubusercontent.com/sglang-bot/sglang-ci-data/main/diffusion-comparisons/charts/latency_wan22_i2v_a14b_720p.png)
-
-
-> [!CAUTION]
-> **Action Required — Performance Alert**
->
-> The following cases need attention:
-> - wan22_i2v_a14b_720p: SGLang regression +26.9% vs 3-run avg (22.07s vs 17.39s)
->
-> cc @mickqian @bbuf @yhyang201
 
 
 ---
