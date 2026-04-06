@@ -1,27 +1,20 @@
 # Diffusion Cross-Framework Performance Dashboard
 
-*Generated: Apr 05 | Commit: `70658bf`*
-
-> [!WARNING]
-> **Performance Regression Detected**
->
-> - **wan22_t2v_a14b_720p** (sglang): 16.10s -> 209.31s (+1200.1%)
-> - **wan22_i2v_a14b_720p** (sglang): 21.07s -> 204.55s (+870.7%)
-
+*Generated: Apr 06 | Commit: `93109cc`*
 
 ## Cross-Framework Performance Comparison
 
 | Model | Risk | sglang (s) |
 |-------|------|---------|
-| FLUX.1-dev | ✅ | **6.68** |
-| FLUX.2-dev | ✅ | **22.80** |
-| Qwen-Image-2512 | ⚠️ | **14.12** |
-| Qwen-Image-Edit-2511 | ✅ | **23.80** |
-| Z-Image-Turbo | ✅ | **0.88** |
-| Wan2.2-T2V-A14B-Diffusers | ⚠️ | **209.31** |
+| FLUX.1-dev | ✅ | **6.70** |
+| FLUX.2-dev | ✅ | **22.86** |
+| Qwen-Image-2512 | ✅ | **13.61** |
+| Qwen-Image-Edit-2511 | ✅ | **23.92** |
+| Z-Image-Turbo | ✅ | **0.89** |
+| Wan2.2-T2V-A14B-Diffusers | ⚠️ | **210.73** |
 | Wan2.2-TI2V-5B-Diffusers | ✅ | **62.15** |
-| LTX-2 | ✅ | **14.06** |
-| Wan2.2-I2V-A14B-Diffusers | ⚠️ | **204.55** |
+| LTX-2 | ✅ | **14.13** |
+| Wan2.2-I2V-A14B-Diffusers | ⚠️ | **207.67** |
 
 ### Latency Trend: flux1_dev_t2i_1024
 
@@ -72,6 +65,7 @@
 
 | Date | Commit | flux1_dev_t2i_1024 (s) | flux2_dev_t2i_1024 (s) | qwen_image_2512_t2i_1024 (s) | qwen_image_edit_2511 (s) | zimage_turbo_t2i_1024 (s) | wan22_t2v_a14b_720p (s) | wan22_ti2v_5b_720p (s) | ltx2_twostage_t2v (s) | wan22_i2v_a14b_720p (s) | Trend |
 |------|--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|-------|
+| Apr 06 | `93109cc` | 6.70 | 22.86 | 13.61 | 23.92 | 0.89 | 210.73 | 62.15 | 14.13 | 207.67 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow: |
 | Apr 05 | `70658bf` | 6.68 | 22.80 | 14.12 | 23.80 | 0.88 | 209.31 | 62.15 | 14.06 | 204.55 | :left_right_arrow:  :left_right_arrow:  :arrow_up:  :arrow_down:  :left_right_arrow:  :arrow_up:  :arrow_down:   :arrow_up: |
 | Apr 04 | `1ad6839` | 6.71 | 22.85 | 13.56 | 29.57 | 0.89 | 16.10 | 64.20 | N/A | 21.07 | :arrow_down:  :left_right_arrow:  :arrow_up:  :arrow_up:  :arrow_down:  :arrow_down:  :arrow_up:   :arrow_down: |
 | Apr 04 | `c84f085` | 6.86 | 22.87 | 13.16 | 23.95 | 0.93 | 210.88 | 62.21 | 14.89 | 206.55 | :arrow_up:  :left_right_arrow:  :arrow_down:  :arrow_down:  :left_right_arrow:  :arrow_up:  :left_right_arrow:   :arrow_up: |
@@ -85,16 +79,14 @@
 | Mar 30 | `afb32d7` | 6.68 | 22.79 | 13.16 | 29.44 | 0.92 | 16.08 | 62.21 | N/A | 10.04 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
 | Mar 29 | `5958f9d` | 6.70 | 22.86 | 13.19 | 29.74 | 0.93 | 16.31 | 62.18 | N/A | 10.04 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :arrow_up: |
 | Mar 29 | `3ab9afd` | 6.70 | 22.90 | 13.19 | 29.52 | 0.93 | 16.17 | 62.17 | N/A | 9.04 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :arrow_down:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :arrow_down: |
-| Mar 28 | `8399708` | 6.68 | 22.76 | 13.71 | 31.67 | 0.93 | 16.27 | 62.22 | N/A | 10.04 | :left_right_arrow:  :left_right_arrow:  :arrow_up:  :arrow_up:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
-| Mar 27 | `c2b3e42` | 6.70 | 22.94 | 13.18 | 29.64 | 0.93 | 16.11 | 62.21 | N/A | 10.04 | -- |
+| Mar 28 | `8399708` | 6.68 | 22.76 | 13.71 | 31.67 | 0.93 | 16.27 | 62.22 | N/A | 10.04 | -- |
 
 > [!CAUTION]
 > **Action Required — Performance Alert**
 >
 > The following cases need attention:
-> - qwen_image_2512_t2i_1024: SGLang regression +5.3% vs 3-run avg (14.12s vs 13.41s)
-> - wan22_t2v_a14b_720p: SGLang regression +158.3% vs 3-run avg (209.31s vs 81.04s)
-> - wan22_i2v_a14b_720p: SGLang regression +146.7% vs 3-run avg (204.55s vs 82.90s)
+> - wan22_t2v_a14b_720p: SGLang regression +44.9% vs 3-run avg (210.73s vs 145.43s)
+> - wan22_i2v_a14b_720p: SGLang regression +44.2% vs 3-run avg (207.67s vs 144.06s)
 
 
 ---
