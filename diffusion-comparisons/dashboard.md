@@ -1,21 +1,27 @@
 # Diffusion Cross-Framework Performance Dashboard
 
-*Generated: Apr 15 | Commit: `2c9e76d`*
+*Generated: Apr 16 | Commit: `a4cf2ea`*
+
+> [!WARNING]
+> **Performance Regression Detected**
+>
+> - **qwen_image_2512_t2i_1024** (sglang): 13.14s -> 14.08s (+7.2%)
+
 
 ## Cross-Framework Performance Comparison
 
 | Model | Risk | sglang (s) |
 |-------|------|---------|
-| FLUX.1-dev | ✅ | **6.69** |
-| FLUX.2-dev | ✅ | **22.78** |
-| Qwen-Image-2512 | ✅ | **13.14** |
-| Qwen-Image-Edit-2511 | ✅ | **23.82** |
+| FLUX.1-dev | ✅ | **6.70** |
+| FLUX.2-dev | ✅ | **22.90** |
+| Qwen-Image-2512 | ⚠️ | **14.08** |
+| Qwen-Image-Edit-2511 | ✅ | **23.93** |
 | Z-Image-Turbo | ✅ | **0.89** |
-| Wan2.2-T2V-A14B-Diffusers | ✅ | **209.49** |
-| Wan2.2-TI2V-5B-Diffusers | ✅ | **63.18** |
-| LTX-2 | ✅ | **14.97** |
-| LTX-2.3 | ❌ | N/A |
-| Wan2.2-I2V-A14B-Diffusers | ✅ | **206.58** |
+| Wan2.2-T2V-A14B-Diffusers | ✅ | **210.73** |
+| Wan2.2-TI2V-5B-Diffusers | ✅ | **62.15** |
+| LTX-2 | ✅ | **14.86** |
+| LTX-2.3 | ✅ | **59.20** |
+| Wan2.2-I2V-A14B-Diffusers | ✅ | **206.60** |
 
 ### Latency Trend: flux1_dev_t2i_1024
 
@@ -57,6 +63,11 @@
 ![Latency Trend ltx2_twostage_t2v](https://raw.githubusercontent.com/sglang-bot/sglang-ci-data/main/diffusion-comparisons/charts/latency_ltx2_twostage_t2v.png)
 
 
+### Latency Trend: ltx2.3_twostage_ti2v_2gpus
+
+![Latency Trend ltx2.3_twostage_ti2v_2gpus](https://raw.githubusercontent.com/sglang-bot/sglang-ci-data/main/diffusion-comparisons/charts/latency_ltx2.3_twostage_ti2v_2gpus.png)
+
+
 ### Latency Trend: wan22_i2v_a14b_720p
 
 ![Latency Trend wan22_i2v_a14b_720p](https://raw.githubusercontent.com/sglang-bot/sglang-ci-data/main/diffusion-comparisons/charts/latency_wan22_i2v_a14b_720p.png)
@@ -66,6 +77,7 @@
 
 | Date | Commit | flux1_dev_t2i_1024 (s) | flux2_dev_t2i_1024 (s) | qwen_image_2512_t2i_1024 (s) | qwen_image_edit_2511 (s) | zimage_turbo_t2i_1024 (s) | wan22_t2v_a14b_720p (s) | wan22_ti2v_5b_720p (s) | ltx2_twostage_t2v (s) | ltx2.3_twostage_ti2v_2gpus (s) | wan22_i2v_a14b_720p (s) | Trend |
 |------|--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|-------|
+| Apr 16 | `a4cf2ea` | 6.70 | 22.90 | 14.08 | 23.93 | 0.89 | 210.73 | 62.15 | 14.86 | 59.20 | 206.60 | :left_right_arrow:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
 | Apr 15 | `2c9e76d` | 6.69 | 22.78 | 13.14 | 23.82 | 0.89 | 209.49 | 63.18 | 14.97 | N/A | 206.58 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_up:   :left_right_arrow: |
 | Apr 14 | `c456cba` | 6.70 | 22.85 | 13.17 | 23.83 | 0.89 | 210.52 | 62.16 | 14.58 | N/A | 206.54 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
 | Apr 13 | `37fc47c` | 6.60 | 22.61 | 12.99 | 23.60 | 0.88 | 209.76 | 61.17 | 14.74 | N/A | 207.63 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_up:   :left_right_arrow: |
@@ -79,14 +91,13 @@
 | Apr 04 | `c84f085` | 6.86 | 22.87 | 13.16 | 23.95 | 0.93 | 210.88 | 62.21 | 14.89 | N/A | 206.55 | :arrow_up:  :left_right_arrow:  :arrow_down:  :arrow_down:  :left_right_arrow:  :arrow_up:  :left_right_arrow:    :arrow_up: |
 | Apr 04 | `95cdbce` | 6.68 | 22.80 | 13.51 | 29.41 | 0.93 | 16.14 | 63.19 | N/A | N/A | 21.07 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:    :left_right_arrow: |
 | Apr 03 | `90e8680` | 6.72 | 22.89 | 13.57 | 29.56 | 0.93 | 16.09 | 62.17 | N/A | N/A | 21.06 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:    :left_right_arrow: |
-| Apr 03 | `29d8e95` | 6.69 | 22.88 | 13.55 | 29.62 | 0.93 | 16.57 | 62.18 | N/A | N/A | 21.07 | :left_right_arrow:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :left_right_arrow:  :arrow_up:  :left_right_arrow:    :arrow_down: |
-| Apr 02 | `d7256eb` | 6.70 | 22.87 | 13.18 | 29.59 | 0.93 | 16.11 | 62.20 | N/A | N/A | 22.07 | -- |
+| Apr 03 | `29d8e95` | 6.69 | 22.88 | 13.55 | 29.62 | 0.93 | 16.57 | 62.18 | N/A | N/A | 21.07 | -- |
 
 > [!CAUTION]
 > **Action Required — Performance Alert**
 >
 > The following cases need attention:
-> - ltx2.3_twostage_ti2v_2gpus: SGLang latency is N/A (broken)
+> - qwen_image_2512_t2i_1024: SGLang regression +7.5% vs 3-run avg (14.08s vs 13.10s)
 
 
 ---
