@@ -1,6 +1,6 @@
 {
   "generator": "official-diffusers",
-  "git_sha": "099a62ecd7e1968afbcd812ecd44aaadcf50f6bc",
+  "git_sha": "af477f7f48265e9fef8673bf3124647b6df767da",
   "suite": "1-gpu-b200",
   "torch_version": "2.9.1+cu130",
   "cuda_available": true,
