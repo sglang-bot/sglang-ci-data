@@ -6,10 +6,10 @@
   "summary": {
     "generated_at": "2026-04-25 08:47:42 UTC",
     "total_cases": 27,
-    "official_comparable": 14,
+    "official_comparable": 15,
     "official_pass": 6,
-    "official_fail": 8,
-    "native_only_excluded": 13,
+    "official_fail": 9,
+    "native_only_excluded": 12,
     "official_oom": 0,
     "official_missing": 0
   },
@@ -159,13 +159,14 @@
     },
     {
       "case_id": "ltx_2.3_two_stage_t2v_2gpus",
-      "report_status": "native_only_excluded",
-      "is_official_comparable": false,
-      "repro_script": null,
-      "wrapper": null,
-      "official_source": "not applicable",
-      "artifact_dir_used_in_report": null,
-      "notes": "Current official script used TI2VidTwoStagesPipeline with images=[] for a T2V CI case and is not proven equivalent to SGLang LTX2TwoStagePipeline; generated GT was removed."
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_ltx23.py",
+      "wrapper": "run_official_ltx23.sh",
+      "official_source": "LTX official ltx-pipelines repository with official 22B checkpoint",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-repro-infer-both",
+      "notes": "Official path is TI2VidTwoStagesPipeline with empty image conditionings for T2V; GT regenerated on H200. Metrics are still far from native and need follow-up alignment.",
+      "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-repro-infer-both"
     },
     {
       "case_id": "qwen_image_edit_2509_ti2i",

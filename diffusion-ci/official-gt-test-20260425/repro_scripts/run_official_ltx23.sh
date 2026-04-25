@@ -10,4 +10,4 @@ export PYTHONPATH=/tmp/mmgen-official-code/LTX-2/packages/ltx-core/src:/tmp/mmge
 cd /sgl-workspace/sglang/python
 python3 "$SCRIPT_DIR/gen_official_ltx23.py" \
   --out-dir "$OUT_DIR" \
-  --case-ids ltx_2.3_one_stage_ti2v
+  --case-ids ltx_2.3_two_stage_t2v_2gpus ltx_2.3_one_stage_ti2v

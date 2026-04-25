@@ -26,7 +26,7 @@ environment before running gated model cases.
 | `flux_image_t2i` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | - |
 | `layerwise_offload` | `native_only_excluded` | `-` | `-` | offload behavior has no upstream official implementation |
 | `ltx_2.3_one_stage_ti2v` | `official_comparable` | `gen_official_ltx23.py` | `run_official_ltx23.sh` | Official GT regenerated successfully on H200; still below current strict thresholds. |
-| `ltx_2.3_two_stage_t2v_2gpus` | `native_only_excluded` | `-` | `-` | current official script used TI2VidTwoStagesPipeline with images=[] for a T2V CI case; generated GT removed |
+| `ltx_2.3_two_stage_t2v_2gpus` | `official_comparable` | `gen_official_ltx23.py` | `run_official_ltx23.sh` | Official GT restored; script path is comparable but native alignment is still poor. |
 | `qwen_image_edit_2509_ti2i` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | Official reference refreshed with current official Diffusers script. |
 | `qwen_image_edit_2511_ti2i` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | - |
 | `qwen_image_edit_ti2i` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | - |

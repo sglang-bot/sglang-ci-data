@@ -32,6 +32,7 @@ Official repo:
 - `wan2_1_t2v_1.3b`: Wan2.1 official repo, MP4 encode plus CI key-frame extraction.
 - `wan2_2_ti2v_5b`: Wan2.2 official repo TI2V path. Diffusers output is not used because it failed to inject the image.
 - `ltx_2.3_one_stage_ti2v`: LTX-Video official repo script with `torch.inference_mode()`.
+- `ltx_2.3_two_stage_t2v_2gpus`: LTX-Video official repo script with `torch.inference_mode()`.
 
 ## Notes
 
@@ -42,4 +43,3 @@ HF tokens are not stored in this bundle.
 Removed from official GT after review:
 
 - `zimage_image_t2i_fp8`: CI uses `--transformer-path MickJ/Z-Image-Turbo-fp8`; current official script generated base-model ZImage output instead.
-- `ltx_2.3_two_stage_t2v_2gpus`: current LTX official script path uses `TI2VidTwoStagesPipeline(images=[])`, not a verified official match for the CI T2V two-stage path.

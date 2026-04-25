@@ -2,10 +2,10 @@
   "summary": {
     "generated_at": "2026-04-25 08:47:42 UTC",
     "total_cases": 27,
-    "official_comparable": 14,
+    "official_comparable": 15,
     "official_pass": 6,
-    "official_fail": 8,
-    "native_only_excluded": 13,
+    "official_fail": 9,
+    "native_only_excluded": 12,
     "official_oom": 0,
     "official_missing": 0
   },
@@ -474,57 +474,61 @@
     },
     {
       "case_id": "ltx_2.3_two_stage_t2v_2gpus",
-      "status": "native_only_excluded",
-      "passed": null,
+      "status": "official_comparable",
+      "passed": false,
       "num_files": 3,
-      "min_clip": null,
-      "min_ssim": null,
-      "min_psnr": null,
-      "max_mad": null,
+      "min_clip": 0.8280659317970276,
+      "min_ssim": 0.2240133449340785,
+      "min_psnr": 13.521193735031623,
+      "max_mad": 41.8500862121582,
       "thresholds": {
         "clip_threshold": 0.9,
         "ssim_threshold": 0.92,
         "psnr_threshold": 24.0,
         "mean_abs_diff_threshold": 10.0
       },
-      "note": "official GT removed; current LTX official script path is TI2VidTwoStagesPipeline(images=[]) and is not a verified match for the CI T2V two-stage path",
-      "compares": [],
+      "note": "Official GT restored; script path is comparable but native alignment is still poor.",
+      "compares": [
+        "ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.compare.jpg",
+        "ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.compare.jpg",
+        "ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.compare.jpg"
+      ],
       "files": [
         {
           "case_id": "ltx_2.3_two_stage_t2v_2gpus",
           "file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.png",
-          "official_file": null,
-          "status": "native_only_excluded",
-          "shape_match": null,
-          "clip_similarity": null,
-          "ssim": null,
-          "psnr": null,
-          "mean_abs_diff": null,
-          "passed": null
+          "official_file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.png",
+          "status": "official_comparable",
+          "shape_match": true,
+          "clip_similarity": 0.8481553792953491,
+          "ssim": 0.271667783817049,
+          "psnr": 13.753272886820193,
+          "mean_abs_diff": 40.9495964050293,
+          "passed": false
         },
         {
           "case_id": "ltx_2.3_two_stage_t2v_2gpus",
           "file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.png",
-          "official_file": null,
-          "status": "native_only_excluded",
-          "shape_match": null,
-          "clip_similarity": null,
-          "ssim": null,
-          "psnr": null,
-          "mean_abs_diff": null,
-          "passed": null
+          "official_file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.png",
+          "status": "official_comparable",
+          "shape_match": true,
+          "clip_similarity": 0.8331456780433655,
+          "ssim": 0.23378027957556258,
+          "psnr": 13.744305889999824,
+          "mean_abs_diff": 40.83750915527344,
+          "passed": false
         },
         {
           "case_id": "ltx_2.3_two_stage_t2v_2gpus",
           "file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.png",
-          "official_file": null,
-          "status": "native_only_excluded",
-          "shape_match": null,
-          "clip_similarity": null,
-          "ssim": null,
-          "psnr": null,
-          "mean_abs_diff": null,
-          "passed": null
+          "official_file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.png",
+          "status": "official_comparable",
+          "shape_match": true,
+          "clip_similarity": 0.8280659317970276,
+          "ssim": 0.2240133449340785,
+          "psnr": 13.521193735031623,
+          "mean_abs_diff": 41.8500862121582,
+          "passed": false
         }
       ]
     },

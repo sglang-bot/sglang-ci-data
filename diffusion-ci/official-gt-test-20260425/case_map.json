@@ -103,6 +103,15 @@
                 "ltx_2.3_one_stage_ti2v_2gpu_frame_last.png"
             ]
         },
+        "ltx_2.3_two_stage_t2v_2gpus": {
+            "source": "ltx_official_repo",
+            "script": "repro_scripts/gen_official_ltx23.py",
+            "outputs": [
+                "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.png",
+                "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.png",
+                "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.png"
+            ]
+        },
         "zimage_image_t2i": {
             "source": "diffusers",
             "script": "repro_scripts/gen_official_diffusion_gt.py",
