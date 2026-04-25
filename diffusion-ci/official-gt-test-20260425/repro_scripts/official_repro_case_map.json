@@ -1,0 +1,332 @@
+{
+  "report": "/tmp/mmgen-ci-official-vs-sglang-report-final/out",
+  "remote_repo_path": "/sgl-workspace/sglang/python/sglang/multimodal_gen",
+  "local_repo_path": "/Users/mick/repos/sglang/python/sglang/multimodal_gen",
+  "no_hf_token_included": true,
+  "summary": {
+    "generated_at": "2026-04-25 08:47:42 UTC",
+    "total_cases": 27,
+    "official_comparable": 14,
+    "official_pass": 6,
+    "official_fail": 8,
+    "native_only_excluded": 11,
+    "official_oom": 2,
+    "official_missing": 0
+  },
+  "scripts": [
+    {
+      "file": "README.md",
+      "sha256": "3d545becbfae6e98521fb8ee1e6c6232f57c0dc91aa160c6a3304940db5b8fa9"
+    },
+    {
+      "file": "build_final_report.py",
+      "sha256": "67d27ee65e57381fc42068777275acf3fe03bb577cbeb5e0fa97fc8190331992"
+    },
+    {
+      "file": "gen_official_diffusion_gt.py",
+      "sha256": "1a43f764d8fd98232efbdbc7a6c37570bec8dc6f7deb426bd058c8f8bfd4ef8f"
+    },
+    {
+      "file": "gen_official_ltx23.py",
+      "sha256": "b6d94a0c1200328695c0bf0f4eabe5dfaf6779d94d951323dc13c962504c3f3a"
+    },
+    {
+      "file": "gen_official_wan22_ti2v.py",
+      "sha256": "2a2020020203ab76bd4d9a42470a135cdca8bc72fbbc1d5600501894b874f91c"
+    },
+    {
+      "file": "official_repro_case_map.json",
+      "sha256": "117dfc170c51c9b7f77df143e17d428520afc2788522e4b5a74d18d0f30e3409"
+    },
+    {
+      "file": "run_official_diffusers_cases.sh",
+      "sha256": "aaf4ae62ce4338fcbc9443971fc90955542764b0f9b05dc09a83d428ea503a3f"
+    },
+    {
+      "file": "run_official_ltx23.sh",
+      "sha256": "867795bc25044d0a766015f0bf869be792b6812d151dd88996dd13a047cf7aba"
+    },
+    {
+      "file": "run_official_wan21.sh",
+      "sha256": "fe1389481b1d810cad7cb460b7b78747fd245d25b37492f1319cc0386ec24c9a"
+    },
+    {
+      "file": "run_official_wan22_ti2v.sh",
+      "sha256": "d21998a4fd259c27c45eb846936a033544595a7b6618ec4be6a3d054682e26cb"
+    }
+  ],
+  "case_mappings": [
+    {
+      "case_id": "fast_hunyuan_video",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    },
+    {
+      "case_id": "flux_2_image_t2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": "Official reference refreshed with current official Diffusers script."
+    },
+    {
+      "case_id": "flux_2_image_t2i_upscaling_4x",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "postprocess upscaling has no upstream official implementation"
+    },
+    {
+      "case_id": "flux_2_klein_image_t2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    },
+    {
+      "case_id": "flux_2_t2i_customized_vae_path",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "custom VAE path is not reproduced by the official script; current artifact used default Flux2 VAE"
+    },
+    {
+      "case_id": "flux_2_ti2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    },
+    {
+      "case_id": "flux_2_ti2i_multi_image_cache_dit",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "cache_dit has no upstream official implementation"
+    },
+    {
+      "case_id": "flux_image_t2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    },
+    {
+      "case_id": "layerwise_offload",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "offload behavior has no upstream official implementation"
+    },
+    {
+      "case_id": "ltx_2.3_one_stage_ti2v",
+      "report_status": "official_oom",
+      "is_official_comparable": false,
+      "repro_script": "gen_official_ltx23.py",
+      "wrapper": "run_official_ltx23.sh",
+      "official_source": "LTX official ltx-pipelines repository with official 22B checkpoint",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-report (old report artifact was OOM; refresh with this script before metric use)",
+      "notes": "Repro script fixed and verified on H200: fp8-cast, inference_mode, synchronous layer streaming, sequential guidance, FlashInfer attention; generated official key frames without OOM.",
+      "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-repro-infer-both"
+    },
+    {
+      "case_id": "ltx_2.3_two_stage_t2v_2gpus",
+      "report_status": "official_oom",
+      "is_official_comparable": false,
+      "repro_script": "gen_official_ltx23.py",
+      "wrapper": "run_official_ltx23.sh",
+      "official_source": "LTX official ltx-pipelines repository with official 22B checkpoint",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-report (old report artifact was OOM; refresh with this script before metric use)",
+      "notes": "Repro script fixed and verified on H200: fp8-cast, inference_mode, synchronous layer streaming, sequential guidance, FlashInfer attention; generated official key frames without OOM.",
+      "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-repro-infer-both"
+    },
+    {
+      "case_id": "qwen_image_edit_2509_ti2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": "Official reference refreshed with current official Diffusers script."
+    },
+    {
+      "case_id": "qwen_image_edit_2511_ti2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    },
+    {
+      "case_id": "qwen_image_edit_ti2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    },
+    {
+      "case_id": "qwen_image_layered_i2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    },
+    {
+      "case_id": "qwen_image_t2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    },
+    {
+      "case_id": "qwen_image_t2i_cache_dit_enabled",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "cache_dit has no upstream official implementation"
+    },
+    {
+      "case_id": "wan2_1_t2v_1.3b",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_wan21.sh",
+      "official_source": "Wan2.1 official repository via gen_official_diffusion_gt.py WAN_OFFICIAL_CASES",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest",
+      "notes": ""
+    },
+    {
+      "case_id": "wan2_1_t2v_1.3b_frame_interp_2x",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "postprocess frame interpolation has no upstream official implementation"
+    },
+    {
+      "case_id": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "postprocess frame interpolation/upscaling has no upstream official implementation"
+    },
+    {
+      "case_id": "wan2_1_t2v_1.3b_teacache_enabled",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "teacache/cache path has no upstream official implementation"
+    },
+    {
+      "case_id": "wan2_1_t2v_1.3b_text_encoder_cpu_offload",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "offload behavior has no upstream official implementation"
+    },
+    {
+      "case_id": "wan2_1_t2v_1.3b_upscaling_4x",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "postprocess upscaling has no upstream official implementation"
+    },
+    {
+      "case_id": "wan2_1_t2v_1_3b_lora_1gpu",
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "CI case is dynamic_lora_path/set_lora; current artifact used Diffusers load_lora_weights, not official Wan repo or dynamic-load semantics"
+    },
+    {
+      "case_id": "wan2_2_ti2v_5b",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_wan22_ti2v.py",
+      "wrapper": "run_official_wan22_ti2v.sh",
+      "official_source": "Wan2.2 official repository, because Diffusers does not inject TI2V image input",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-wan22-ti2v-correct",
+      "notes": "Official reference overlaid from Wan2.2 official repo; previous Diffusers path did not inject image."
+    },
+    {
+      "case_id": "zimage_image_t2i",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    },
+    {
+      "case_id": "zimage_image_t2i_fp8",
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
+      "repro_script": "gen_official_diffusion_gt.py",
+      "wrapper": "run_official_diffusers_cases.sh",
+      "official_source": "official Diffusers pipeline from the model repo",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
+      "notes": ""
+    }
+  ]
+}

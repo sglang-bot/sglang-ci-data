@@ -1,0 +1,386 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SGLang vs Official GT Report</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 24px; color: #202124; }
+h1 { font-size: 24px; margin: 0 0 8px; }
+.meta { color: #5f6368; margin-bottom: 18px; }
+.summary { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 20px; }
+.pill { border: 1px solid #dadce0; border-radius: 6px; padding: 8px 10px; background: #fff; }
+table { border-collapse: collapse; width: 100%; table-layout: fixed; }
+th, td { border-top: 1px solid #e0e0e0; padding: 8px; vertical-align: top; font-size: 13px; }
+th { text-align: left; position: sticky; top: 0; background: #f8f9fa; z-index: 1; }
+tr.pass { background: #f4fbf4; }
+tr.fail { background: #fff4f4; }
+tr.excluded { background: #f8f9fa; }
+tr.pending { background: #fff9e6; }
+code { font-size: 12px; }
+.thumbs { width: 420px; }
+.thumbs img { max-width: 190px; max-height: 150px; margin: 0 6px 6px 0; border: 1px solid #dadce0; }
+.notes { max-width: 1000px; line-height: 1.45; }
+</style>
+</head>
+<body>
+<h1>SGLang vs Official GT Report</h1>
+<div class="meta">Generated at 2026-04-25 08:47:42 UTC. No ground-truth files were overwritten.</div>
+<div class="summary">
+  <div class="pill">Total cases: 27</div>
+  <div class="pill">Official comparable: 14</div>
+  <div class="pill">Pass: 6</div>
+  <div class="pill">Fail: 8</div>
+  <div class="pill">Native-only excluded: 11</div>
+  <div class="pill">Official OOM/pending: 2</div>
+  <div class="pill">Official missing: 0</div>
+</div>
+<div class="notes">
+  <p>Policy applied: cache_dit, teacache, offload, and postprocess cases are excluded from official pass/fail because there is no upstream official implementation for those paths.</p>
+  <p>Wan2.2 TI2V uses the corrected official Wan2.2 repository output. FLUX.2 image T2I and Qwen Image Edit 2509 use refreshed official references.</p>
+  <p>LTX 2.3 representative native cases are included. Official LTX repo generation was attempted with the official 22B checkpoint, but H200 ran out of memory before producing valid samples, so those rows are pending rather than failed.</p>
+</div>
+<table>
+<thead>
+<tr>
+  <th style="width: 240px;">Case</th>
+  <th style="width: 150px;">Status</th>
+  <th style="width: 60px;">Pass</th>
+  <th style="width: 80px;">Min CLIP</th>
+  <th style="width: 80px;">Min SSIM</th>
+  <th style="width: 80px;">Min PSNR</th>
+  <th style="width: 80px;">Max MAD</th>
+  <th>Note</th>
+  <th style="width: 430px;">Comparison</th>
+</tr>
+</thead>
+<tbody>
+
+            <tr class="fail">
+              <td><code>fast_hunyuan_video</code></td>
+              <td>official_comparable</td>
+              <td>FAIL</td>
+              <td>0.6616</td>
+              <td>0.1367</td>
+              <td>10.9831</td>
+              <td>59.0869</td>
+              <td></td>
+              <td class="thumbs"><a href="fast_hunyuan_video__fast_hunyuan_video_1gpu_frame_0.compare.jpg"><img src="fast_hunyuan_video__fast_hunyuan_video_1gpu_frame_0.compare.jpg" loading="lazy"></a><a href="fast_hunyuan_video__fast_hunyuan_video_1gpu_frame_mid.compare.jpg"><img src="fast_hunyuan_video__fast_hunyuan_video_1gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="fast_hunyuan_video__fast_hunyuan_video_1gpu_frame_last.compare.jpg"><img src="fast_hunyuan_video__fast_hunyuan_video_1gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="fail">
+              <td><code>flux_2_image_t2i</code></td>
+              <td>official_comparable</td>
+              <td>FAIL</td>
+              <td>0.9917</td>
+              <td>0.8941</td>
+              <td>19.7087</td>
+              <td>9.4003</td>
+              <td>Official reference refreshed with current official Diffusers script.</td>
+              <td class="thumbs"><a href="flux_2_image_t2i__flux_2_image_t2i_1gpu.compare.jpg"><img src="flux_2_image_t2i__flux_2_image_t2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>flux_2_image_t2i_upscaling_4x</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>postprocess upscaling has no upstream official implementation</td>
+              <td class="thumbs"><a href="flux_2_image_t2i_upscaling_4x__flux_2_image_t2i_upscaling_4x_1gpu.compare.jpg"><img src="flux_2_image_t2i_upscaling_4x__flux_2_image_t2i_upscaling_4x_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="pass">
+              <td><code>flux_2_klein_image_t2i</code></td>
+              <td>official_comparable</td>
+              <td>PASS</td>
+              <td>0.9801</td>
+              <td>0.9225</td>
+              <td>25.1725</td>
+              <td>4.6907</td>
+              <td></td>
+              <td class="thumbs"><a href="flux_2_klein_image_t2i__flux_2_klein_image_t2i_1gpu.compare.jpg"><img src="flux_2_klein_image_t2i__flux_2_klein_image_t2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>flux_2_t2i_customized_vae_path</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>custom VAE path is not reproduced by the official script; existing official artifact used Flux2Pipeline with the default VAE, not --vae-path=fal/FLUX.2-Tiny-AutoEncoder</td>
+              <td class="thumbs"><a href="flux_2_t2i_customized_vae_path__flux_2_t2i_customized_vae_path_1gpu.compare.jpg"><img src="flux_2_t2i_customized_vae_path__flux_2_t2i_customized_vae_path_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="fail">
+              <td><code>flux_2_ti2i</code></td>
+              <td>official_comparable</td>
+              <td>FAIL</td>
+              <td>0.9733</td>
+              <td>0.8933</td>
+              <td>20.3611</td>
+              <td>12.7087</td>
+              <td></td>
+              <td class="thumbs"><a href="flux_2_ti2i__flux_2_ti2i_1gpu.compare.jpg"><img src="flux_2_ti2i__flux_2_ti2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>flux_2_ti2i_multi_image_cache_dit</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>cache_dit has no upstream official implementation</td>
+              <td class="thumbs"><a href="flux_2_ti2i_multi_image_cache_dit__flux_2_ti2i_multi_image_cache_dit_1gpu.compare.jpg"><img src="flux_2_ti2i_multi_image_cache_dit__flux_2_ti2i_multi_image_cache_dit_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="pass">
+              <td><code>flux_image_t2i</code></td>
+              <td>official_comparable</td>
+              <td>PASS</td>
+              <td>0.9928</td>
+              <td>0.9722</td>
+              <td>29.1727</td>
+              <td>2.3568</td>
+              <td></td>
+              <td class="thumbs"><a href="flux_image_t2i__flux_image_t2i_1gpu.compare.jpg"><img src="flux_image_t2i__flux_image_t2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>layerwise_offload</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>offload behavior has no upstream official implementation</td>
+              <td class="thumbs"><a href="layerwise_offload__layerwise_offload_1gpu.compare.jpg"><img src="layerwise_offload__layerwise_offload_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="pending">
+              <td><code>ltx_2.3_one_stage_ti2v</code></td>
+              <td>official_oom</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Official LTX repo generation attempted on H200 with official 22B checkpoint; OOM before a valid official sample. OutOfMemoryError: CUDA out of memory.</td>
+              <td class="thumbs"><a href="ltx_2.3_one_stage_ti2v__ltx_2.3_one_stage_ti2v_2gpu_frame_0.compare.jpg"><img src="ltx_2.3_one_stage_ti2v__ltx_2.3_one_stage_ti2v_2gpu_frame_0.compare.jpg" loading="lazy"></a><a href="ltx_2.3_one_stage_ti2v__ltx_2.3_one_stage_ti2v_2gpu_frame_mid.compare.jpg"><img src="ltx_2.3_one_stage_ti2v__ltx_2.3_one_stage_ti2v_2gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="ltx_2.3_one_stage_ti2v__ltx_2.3_one_stage_ti2v_2gpu_frame_last.compare.jpg"><img src="ltx_2.3_one_stage_ti2v__ltx_2.3_one_stage_ti2v_2gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="pending">
+              <td><code>ltx_2.3_two_stage_t2v_2gpus</code></td>
+              <td>official_oom</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Official LTX repo generation attempted on H200 with official 22B checkpoint; OOM before a valid official sample. OutOfMemoryError: CUDA out of memory.</td>
+              <td class="thumbs"><a href="ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.compare.jpg"><img src="ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.compare.jpg" loading="lazy"></a><a href="ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.compare.jpg"><img src="ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.compare.jpg"><img src="ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="fail">
+              <td><code>qwen_image_edit_2509_ti2i</code></td>
+              <td>official_comparable</td>
+              <td>FAIL</td>
+              <td>0.8620</td>
+              <td>0.6300</td>
+              <td>12.3691</td>
+              <td>31.7997</td>
+              <td>Official reference refreshed with current official Diffusers script.</td>
+              <td class="thumbs"><a href="qwen_image_edit_2509_ti2i__qwen_image_edit_2509_ti2i_1gpu.compare.jpg"><img src="qwen_image_edit_2509_ti2i__qwen_image_edit_2509_ti2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="fail">
+              <td><code>qwen_image_edit_2511_ti2i</code></td>
+              <td>official_comparable</td>
+              <td>FAIL</td>
+              <td>0.9853</td>
+              <td>0.9674</td>
+              <td>26.9216</td>
+              <td>9.7034</td>
+              <td></td>
+              <td class="thumbs"><a href="qwen_image_edit_2511_ti2i__qwen_image_edit_2511_ti2i_1gpu.compare.jpg"><img src="qwen_image_edit_2511_ti2i__qwen_image_edit_2511_ti2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="fail">
+              <td><code>qwen_image_edit_ti2i</code></td>
+              <td>official_comparable</td>
+              <td>FAIL</td>
+              <td>0.9890</td>
+              <td>0.9506</td>
+              <td>26.6210</td>
+              <td>8.4044</td>
+              <td></td>
+              <td class="thumbs"><a href="qwen_image_edit_ti2i__qwen_image_edit_ti2i_1gpu.compare.jpg"><img src="qwen_image_edit_ti2i__qwen_image_edit_ti2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="pass">
+              <td><code>qwen_image_layered_i2i</code></td>
+              <td>official_comparable</td>
+              <td>PASS</td>
+              <td>0.9979</td>
+              <td>0.9569</td>
+              <td>33.2586</td>
+              <td>3.0523</td>
+              <td></td>
+              <td class="thumbs"><a href="qwen_image_layered_i2i__qwen_image_layered_i2i_1gpu.compare.jpg"><img src="qwen_image_layered_i2i__qwen_image_layered_i2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="pass">
+              <td><code>qwen_image_t2i</code></td>
+              <td>official_comparable</td>
+              <td>PASS</td>
+              <td>0.9985</td>
+              <td>0.9322</td>
+              <td>22.9883</td>
+              <td>4.3484</td>
+              <td></td>
+              <td class="thumbs"><a href="qwen_image_t2i__qwen_image_t2i_1gpu.compare.jpg"><img src="qwen_image_t2i__qwen_image_t2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>qwen_image_t2i_cache_dit_enabled</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>cache_dit has no upstream official implementation</td>
+              <td class="thumbs"><a href="qwen_image_t2i_cache_dit_enabled__qwen_image_t2i_cache_dit_enabled_1gpu.compare.jpg"><img src="qwen_image_t2i_cache_dit_enabled__qwen_image_t2i_cache_dit_enabled_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="pass">
+              <td><code>wan2_1_t2v_1.3b</code></td>
+              <td>official_comparable</td>
+              <td>PASS</td>
+              <td>0.9925</td>
+              <td>0.8651</td>
+              <td>25.5545</td>
+              <td>6.6810</td>
+              <td></td>
+              <td class="thumbs"><a href="wan2_1_t2v_1.3b__wan2_1_t2v_1.3b_1gpu_frame_0.compare.jpg"><img src="wan2_1_t2v_1.3b__wan2_1_t2v_1.3b_1gpu_frame_0.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b__wan2_1_t2v_1.3b_1gpu_frame_mid.compare.jpg"><img src="wan2_1_t2v_1.3b__wan2_1_t2v_1.3b_1gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b__wan2_1_t2v_1.3b_1gpu_frame_last.compare.jpg"><img src="wan2_1_t2v_1.3b__wan2_1_t2v_1.3b_1gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>wan2_1_t2v_1.3b_frame_interp_2x</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>postprocess frame interpolation has no upstream official implementation</td>
+              <td class="thumbs"><a href="wan2_1_t2v_1.3b_frame_interp_2x__wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_0.compare.jpg"><img src="wan2_1_t2v_1.3b_frame_interp_2x__wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_0.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_frame_interp_2x__wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_mid.compare.jpg"><img src="wan2_1_t2v_1.3b_frame_interp_2x__wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_frame_interp_2x__wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_last.compare.jpg"><img src="wan2_1_t2v_1.3b_frame_interp_2x__wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>postprocess frame interpolation/upscaling has no upstream official implementation</td>
+              <td class="thumbs"><a href="wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x__wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_0.compare.jpg"><img src="wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x__wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_0.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x__wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_mid.compare.jpg"><img src="wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x__wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x__wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_last.compare.jpg"><img src="wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x__wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>wan2_1_t2v_1.3b_teacache_enabled</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>teacache/cache path has no upstream official implementation</td>
+              <td class="thumbs"><a href="wan2_1_t2v_1.3b_teacache_enabled__wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_0.compare.jpg"><img src="wan2_1_t2v_1.3b_teacache_enabled__wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_0.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_teacache_enabled__wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_mid.compare.jpg"><img src="wan2_1_t2v_1.3b_teacache_enabled__wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_teacache_enabled__wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_last.compare.jpg"><img src="wan2_1_t2v_1.3b_teacache_enabled__wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>wan2_1_t2v_1.3b_text_encoder_cpu_offload</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>offload behavior has no upstream official implementation</td>
+              <td class="thumbs"><a href="wan2_1_t2v_1.3b_text_encoder_cpu_offload__wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_0.compare.jpg"><img src="wan2_1_t2v_1.3b_text_encoder_cpu_offload__wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_0.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_text_encoder_cpu_offload__wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_mid.compare.jpg"><img src="wan2_1_t2v_1.3b_text_encoder_cpu_offload__wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_text_encoder_cpu_offload__wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_last.compare.jpg"><img src="wan2_1_t2v_1.3b_text_encoder_cpu_offload__wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>wan2_1_t2v_1.3b_upscaling_4x</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>postprocess upscaling has no upstream official implementation</td>
+              <td class="thumbs"><a href="wan2_1_t2v_1.3b_upscaling_4x__wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_0.compare.jpg"><img src="wan2_1_t2v_1.3b_upscaling_4x__wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_0.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_upscaling_4x__wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_mid.compare.jpg"><img src="wan2_1_t2v_1.3b_upscaling_4x__wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1.3b_upscaling_4x__wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_last.compare.jpg"><img src="wan2_1_t2v_1.3b_upscaling_4x__wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="excluded">
+              <td><code>wan2_1_t2v_1_3b_lora_1gpu</code></td>
+              <td>native_only_excluded</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Wan dynamic LoRA/set_lora CI path is not an official-repo baseline; existing artifact was Diffusers WanPipeline + load_lora_weights, not Wan official repo and not dynamic-load semantics</td>
+              <td class="thumbs"><a href="wan2_1_t2v_1_3b_lora_1gpu__wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_0.compare.jpg"><img src="wan2_1_t2v_1_3b_lora_1gpu__wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_0.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1_3b_lora_1gpu__wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_mid.compare.jpg"><img src="wan2_1_t2v_1_3b_lora_1gpu__wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="wan2_1_t2v_1_3b_lora_1gpu__wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_last.compare.jpg"><img src="wan2_1_t2v_1_3b_lora_1gpu__wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="fail">
+              <td><code>wan2_2_ti2v_5b</code></td>
+              <td>official_comparable</td>
+              <td>FAIL</td>
+              <td>0.7765</td>
+              <td>0.5822</td>
+              <td>14.8012</td>
+              <td>24.9430</td>
+              <td>Official reference overlaid from Wan2.2 official repo; previous Diffusers path did not inject image.</td>
+              <td class="thumbs"><a href="wan2_2_ti2v_5b__wan2_2_ti2v_5b_1gpu_frame_0.compare.jpg"><img src="wan2_2_ti2v_5b__wan2_2_ti2v_5b_1gpu_frame_0.compare.jpg" loading="lazy"></a><a href="wan2_2_ti2v_5b__wan2_2_ti2v_5b_1gpu_frame_mid.compare.jpg"><img src="wan2_2_ti2v_5b__wan2_2_ti2v_5b_1gpu_frame_mid.compare.jpg" loading="lazy"></a><a href="wan2_2_ti2v_5b__wan2_2_ti2v_5b_1gpu_frame_last.compare.jpg"><img src="wan2_2_ti2v_5b__wan2_2_ti2v_5b_1gpu_frame_last.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="pass">
+              <td><code>zimage_image_t2i</code></td>
+              <td>official_comparable</td>
+              <td>PASS</td>
+              <td>0.9911</td>
+              <td>0.9439</td>
+              <td>26.4687</td>
+              <td>3.5441</td>
+              <td></td>
+              <td class="thumbs"><a href="zimage_image_t2i__zimage_image_t2i_1gpu.compare.jpg"><img src="zimage_image_t2i__zimage_image_t2i_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+            <tr class="fail">
+              <td><code>zimage_image_t2i_fp8</code></td>
+              <td>official_comparable</td>
+              <td>FAIL</td>
+              <td>0.9894</td>
+              <td>0.8168</td>
+              <td>17.1115</td>
+              <td>15.1621</td>
+              <td></td>
+              <td class="thumbs"><a href="zimage_image_t2i_fp8__zimage_image_t2i_fp8_1gpu.compare.jpg"><img src="zimage_image_t2i_fp8__zimage_image_t2i_fp8_1gpu.compare.jpg" loading="lazy"></a></td>
+            </tr>
+            
+</tbody>
+</table>
+</body>
+</html>
