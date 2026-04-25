@@ -9,8 +9,8 @@
     "official_comparable": 14,
     "official_pass": 6,
     "official_fail": 8,
-    "native_only_excluded": 11,
-    "official_oom": 2,
+    "native_only_excluded": 13,
+    "official_oom": 0,
     "official_missing": 0
   },
   "scripts": [
@@ -148,25 +148,24 @@
     },
     {
       "case_id": "ltx_2.3_one_stage_ti2v",
-      "report_status": "official_oom",
-      "is_official_comparable": false,
+      "report_status": "official_comparable",
+      "is_official_comparable": true,
       "repro_script": "gen_official_ltx23.py",
       "wrapper": "run_official_ltx23.sh",
       "official_source": "LTX official ltx-pipelines repository with official 22B checkpoint",
-      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-report (old report artifact was OOM; refresh with this script before metric use)",
-      "notes": "Repro script fixed and verified on H200: fp8-cast, inference_mode, synchronous layer streaming, sequential guidance, FlashInfer attention; generated official key frames without OOM.",
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-repro-infer-both",
+      "notes": "Official GT regenerated successfully on H200 with fp8-cast, inference_mode, synchronous layer streaming, sequential guidance, and FlashInfer attention.",
       "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-repro-infer-both"
     },
     {
       "case_id": "ltx_2.3_two_stage_t2v_2gpus",
-      "report_status": "official_oom",
+      "report_status": "native_only_excluded",
       "is_official_comparable": false,
-      "repro_script": "gen_official_ltx23.py",
-      "wrapper": "run_official_ltx23.sh",
-      "official_source": "LTX official ltx-pipelines repository with official 22B checkpoint",
-      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-report (old report artifact was OOM; refresh with this script before metric use)",
-      "notes": "Repro script fixed and verified on H200: fp8-cast, inference_mode, synchronous layer streaming, sequential guidance, FlashInfer attention; generated official key frames without OOM.",
-      "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-repro-infer-both"
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "Current official script used TI2VidTwoStagesPipeline with images=[] for a T2V CI case and is not proven equivalent to SGLang LTX2TwoStagePipeline; generated GT was removed."
     },
     {
       "case_id": "qwen_image_edit_2509_ti2i",
@@ -320,13 +319,13 @@
     },
     {
       "case_id": "zimage_image_t2i_fp8",
-      "report_status": "official_comparable",
-      "is_official_comparable": true,
-      "repro_script": "gen_official_diffusion_gt.py",
-      "wrapper": "run_official_diffusers_cases.sh",
-      "official_source": "official Diffusers pipeline from the model repo",
-      "artifact_dir_used_in_report": "/tmp/mmgen-official-report-latest plus refreshed overlays for selected cases",
-      "notes": ""
+      "report_status": "native_only_excluded",
+      "is_official_comparable": false,
+      "repro_script": null,
+      "wrapper": null,
+      "official_source": "not applicable",
+      "artifact_dir_used_in_report": null,
+      "notes": "CI case uses --transformer-path MickJ/Z-Image-Turbo-fp8; current official Diffusers script only reproduces the base Tongyi-MAI/Z-Image-Turbo path, so the official GT was removed."
     }
   ]
 }

@@ -8,4 +8,6 @@ OUT_DIR=${1:-/tmp/mmgen-official-ltx23-report}
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 export PYTHONPATH=/tmp/mmgen-official-code/LTX-2/packages/ltx-core/src:/tmp/mmgen-official-code/LTX-2/packages/ltx-pipelines/src:/sgl-workspace/sglang/python:$PYTHONPATH
 cd /sgl-workspace/sglang/python
-python3 "$SCRIPT_DIR/gen_official_ltx23.py" --out-dir "$OUT_DIR"
+python3 "$SCRIPT_DIR/gen_official_ltx23.py" \
+  --out-dir "$OUT_DIR" \
+  --case-ids ltx_2.3_one_stage_ti2v

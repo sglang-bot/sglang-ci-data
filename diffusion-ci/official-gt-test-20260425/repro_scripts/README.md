@@ -25,8 +25,8 @@ environment before running gated model cases.
 | `flux_2_ti2i_multi_image_cache_dit` | `native_only_excluded` | `-` | `-` | cache_dit has no upstream official implementation |
 | `flux_image_t2i` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | - |
 | `layerwise_offload` | `native_only_excluded` | `-` | `-` | offload behavior has no upstream official implementation |
-| `ltx_2.3_one_stage_ti2v` | `official_oom` | `gen_official_ltx23.py` | `run_official_ltx23.sh` | Repro script fixed and verified on H200: fp8-cast, inference_mode, synchronous layer streaming, sequential guidance, FlashInfer attention; generated official key frames without OOM. |
-| `ltx_2.3_two_stage_t2v_2gpus` | `official_oom` | `gen_official_ltx23.py` | `run_official_ltx23.sh` | Repro script fixed and verified on H200: fp8-cast, inference_mode, synchronous layer streaming, sequential guidance, FlashInfer attention; generated official key frames without OOM. |
+| `ltx_2.3_one_stage_ti2v` | `official_comparable` | `gen_official_ltx23.py` | `run_official_ltx23.sh` | Official GT regenerated successfully on H200; still below current strict thresholds. |
+| `ltx_2.3_two_stage_t2v_2gpus` | `native_only_excluded` | `-` | `-` | current official script used TI2VidTwoStagesPipeline with images=[] for a T2V CI case; generated GT removed |
 | `qwen_image_edit_2509_ti2i` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | Official reference refreshed with current official Diffusers script. |
 | `qwen_image_edit_2511_ti2i` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | - |
 | `qwen_image_edit_ti2i` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | - |
@@ -42,4 +42,4 @@ environment before running gated model cases.
 | `wan2_1_t2v_1_3b_lora_1gpu` | `native_only_excluded` | `-` | `-` | CI case is dynamic_lora_path/set_lora; current artifact used Diffusers load_lora_weights, not official Wan repo or dynamic-load semantics |
 | `wan2_2_ti2v_5b` | `official_comparable` | `gen_official_wan22_ti2v.py` | `run_official_wan22_ti2v.sh` | Official reference overlaid from Wan2.2 official repo; previous Diffusers path did not inject image. |
 | `zimage_image_t2i` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | - |
-| `zimage_image_t2i_fp8` | `official_comparable` | `gen_official_diffusion_gt.py` | `run_official_diffusers_cases.sh` | - |
+| `zimage_image_t2i_fp8` | `native_only_excluded` | `-` | `-` | CI uses --transformer-path MickJ/Z-Image-Turbo-fp8; current official script only reproduces base ZImage |

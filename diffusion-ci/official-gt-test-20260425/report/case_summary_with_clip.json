@@ -5,8 +5,8 @@
     "official_comparable": 14,
     "official_pass": 6,
     "official_fail": 8,
-    "native_only_excluded": 11,
-    "official_oom": 2,
+    "native_only_excluded": 13,
+    "official_oom": 0,
     "official_missing": 0
   },
   "cases": [
@@ -414,20 +414,20 @@
     },
     {
       "case_id": "ltx_2.3_one_stage_ti2v",
-      "status": "official_oom",
-      "passed": null,
+      "status": "official_comparable",
+      "passed": false,
       "num_files": 3,
-      "min_clip": null,
-      "min_ssim": null,
-      "min_psnr": null,
-      "max_mad": null,
+      "min_clip": 0.8274725079536438,
+      "min_ssim": 0.6733478287019418,
+      "min_psnr": 17.29613953969978,
+      "max_mad": 18.38913345336914,
       "thresholds": {
         "clip_threshold": 0.9,
         "ssim_threshold": 0.92,
         "psnr_threshold": 24.0,
         "mean_abs_diff_threshold": 10.0
       },
-      "note": "Official LTX repo generation attempted on H200 with official 22B checkpoint; OOM before a valid official sample. OutOfMemoryError: CUDA out of memory.",
+      "note": "Official GT regenerated successfully on H200; still below current strict thresholds.",
       "compares": [
         "ltx_2.3_one_stage_ti2v__ltx_2.3_one_stage_ti2v_2gpu_frame_0.compare.jpg",
         "ltx_2.3_one_stage_ti2v__ltx_2.3_one_stage_ti2v_2gpu_frame_mid.compare.jpg",
@@ -437,44 +437,44 @@
         {
           "case_id": "ltx_2.3_one_stage_ti2v",
           "file": "ltx_2.3_one_stage_ti2v_2gpu_frame_0.png",
-          "official_file": null,
-          "status": "official_oom",
-          "shape_match": null,
-          "clip_similarity": null,
-          "ssim": null,
-          "psnr": null,
-          "mean_abs_diff": null,
-          "passed": null
+          "official_file": "ltx_2.3_one_stage_ti2v_2gpu_frame_0.png",
+          "status": "official_comparable",
+          "shape_match": true,
+          "clip_similarity": 0.9818258881568909,
+          "ssim": 0.9638860151001011,
+          "psnr": 36.974272918816936,
+          "mean_abs_diff": 2.2683725357055664,
+          "passed": false
         },
         {
           "case_id": "ltx_2.3_one_stage_ti2v",
           "file": "ltx_2.3_one_stage_ti2v_2gpu_frame_mid.png",
-          "official_file": null,
-          "status": "official_oom",
-          "shape_match": null,
-          "clip_similarity": null,
-          "ssim": null,
-          "psnr": null,
-          "mean_abs_diff": null,
-          "passed": null
+          "official_file": "ltx_2.3_one_stage_ti2v_2gpu_frame_mid.png",
+          "status": "official_comparable",
+          "shape_match": true,
+          "clip_similarity": 0.8274725079536438,
+          "ssim": 0.6877488052377956,
+          "psnr": 18.26176369432087,
+          "mean_abs_diff": 16.878089904785156,
+          "passed": false
         },
         {
           "case_id": "ltx_2.3_one_stage_ti2v",
           "file": "ltx_2.3_one_stage_ti2v_2gpu_frame_last.png",
-          "official_file": null,
-          "status": "official_oom",
-          "shape_match": null,
-          "clip_similarity": null,
-          "ssim": null,
-          "psnr": null,
-          "mean_abs_diff": null,
-          "passed": null
+          "official_file": "ltx_2.3_one_stage_ti2v_2gpu_frame_last.png",
+          "status": "official_comparable",
+          "shape_match": true,
+          "clip_similarity": 0.849204421043396,
+          "ssim": 0.6733478287019418,
+          "psnr": 17.29613953969978,
+          "mean_abs_diff": 18.38913345336914,
+          "passed": false
         }
       ]
     },
     {
       "case_id": "ltx_2.3_two_stage_t2v_2gpus",
-      "status": "official_oom",
+      "status": "native_only_excluded",
       "passed": null,
       "num_files": 3,
       "min_clip": null,
@@ -487,18 +487,14 @@
         "psnr_threshold": 24.0,
         "mean_abs_diff_threshold": 10.0
       },
-      "note": "Official LTX repo generation attempted on H200 with official 22B checkpoint; OOM before a valid official sample. OutOfMemoryError: CUDA out of memory.",
-      "compares": [
-        "ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.compare.jpg",
-        "ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.compare.jpg",
-        "ltx_2.3_two_stage_t2v_2gpus__ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.compare.jpg"
-      ],
+      "note": "official GT removed; current LTX official script path is TI2VidTwoStagesPipeline(images=[]) and is not a verified match for the CI T2V two-stage path",
+      "compares": [],
       "files": [
         {
           "case_id": "ltx_2.3_two_stage_t2v_2gpus",
           "file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.png",
           "official_file": null,
-          "status": "official_oom",
+          "status": "native_only_excluded",
           "shape_match": null,
           "clip_similarity": null,
           "ssim": null,
@@ -510,7 +506,7 @@
           "case_id": "ltx_2.3_two_stage_t2v_2gpus",
           "file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.png",
           "official_file": null,
-          "status": "official_oom",
+          "status": "native_only_excluded",
           "shape_match": null,
           "clip_similarity": null,
           "ssim": null,
@@ -522,7 +518,7 @@
           "case_id": "ltx_2.3_two_stage_t2v_2gpus",
           "file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.png",
           "official_file": null,
-          "status": "official_oom",
+          "status": "native_only_excluded",
           "shape_match": null,
           "clip_similarity": null,
           "ssim": null,
@@ -1372,45 +1368,39 @@
     },
     {
       "case_id": "zimage_image_t2i_fp8",
-      "status": "official_comparable",
-      "passed": false,
+      "status": "native_only_excluded",
+      "passed": null,
       "num_files": 1,
-      "min_clip": 0.9893549084663391,
-      "min_ssim": 0.8168132613424106,
-      "min_psnr": 17.111542338950645,
-      "max_mad": 15.162091255187988,
+      "min_clip": null,
+      "min_ssim": null,
+      "min_psnr": null,
+      "max_mad": null,
       "thresholds": {
         "clip_threshold": 0.94,
         "ssim_threshold": 0.88,
         "psnr_threshold": 21.0,
         "mean_abs_diff_threshold": 9.5
       },
-      "note": "",
-      "compares": [
-        "zimage_image_t2i_fp8__zimage_image_t2i_fp8_1gpu.compare.jpg"
-      ],
+      "note": "native quantization-specific case; official Diffusers base-model GT removed because it does not reproduce --transformer-path MickJ/Z-Image-Turbo-fp8",
+      "compares": [],
       "files": [
         {
           "case_id": "zimage_image_t2i_fp8",
           "file": "zimage_image_t2i_fp8_1gpu.jpg",
-          "official_file": "zimage_image_t2i_fp8_1gpu.jpg",
-          "status": "official_comparable",
-          "shape_match": true,
-          "clip_similarity": 0.9893549084663391,
-          "ssim": 0.8168132613424106,
-          "psnr": 17.111542338950645,
-          "mean_abs_diff": 15.162091255187988,
-          "passed": false,
+          "official_file": null,
+          "status": "native_only_excluded",
+          "shape_match": null,
+          "clip_similarity": null,
+          "ssim": null,
+          "psnr": null,
+          "mean_abs_diff": null,
+          "passed": null,
           "native_shape": [
             1024,
             1024,
             3
           ],
-          "official_shape": [
-            1024,
-            1024,
-            3
-          ]
+          "official_shape": null
         }
       ]
     }
