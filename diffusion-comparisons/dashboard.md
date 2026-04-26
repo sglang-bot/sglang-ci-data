@@ -1,21 +1,21 @@
 # Diffusion Cross-Framework Performance Dashboard
 
-*Generated: Apr 25 | Commit: `a4facdf`*
+*Generated: Apr 26 | Commit: `7141735`*
 
 ## Cross-Framework Performance Comparison
 
 | Model | Risk | sglang (s) |
 |-------|------|---------|
-| FLUX.1-dev | ❌ | N/A |
-| FLUX.2-dev | ❌ | N/A |
-| Qwen-Image-2512 | ❌ | N/A |
-| Qwen-Image-Edit-2511 | ❌ | N/A |
-| Z-Image-Turbo | ❌ | N/A |
-| Wan2.2-T2V-A14B-Diffusers | ❌ | N/A |
-| Wan2.2-TI2V-5B-Diffusers | ❌ | N/A |
-| LTX-2 | ❌ | N/A |
+| FLUX.1-dev | ✅ | **6.71** |
+| FLUX.2-dev | ✅ | **22.84** |
+| Qwen-Image-2512 | ✅ | **13.24** |
+| Qwen-Image-Edit-2511 | ✅ | **23.89** |
+| Z-Image-Turbo | ✅ | **0.89** |
+| Wan2.2-T2V-A14B-Diffusers | ✅ | **212.74** |
+| Wan2.2-TI2V-5B-Diffusers | ✅ | **62.22** |
+| LTX-2 | ✅ | **11.86** |
 | LTX-2.3 | ❌ | N/A |
-| Wan2.2-I2V-A14B-Diffusers | ❌ | N/A |
+| Wan2.2-I2V-A14B-Diffusers | ✅ | **208.55** |
 
 ### Latency Trend: flux1_dev_t2i_1024
 
@@ -71,6 +71,7 @@
 
 | Date | Commit | flux1_dev_t2i_1024 (s) | flux2_dev_t2i_1024 (s) | qwen_image_2512_t2i_1024 (s) | qwen_image_edit_2511 (s) | zimage_turbo_t2i_1024 (s) | wan22_t2v_a14b_720p (s) | wan22_ti2v_5b_720p (s) | ltx2_twostage_t2v (s) | ltx2.3_twostage_ti2v_2gpus (s) | wan22_i2v_a14b_720p (s) | Trend |
 |------|--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|-------|
+| Apr 26 | `7141735` | 6.71 | 22.84 | 13.24 | 23.89 | 0.89 | 212.74 | 62.22 | 11.86 | N/A | 208.55 |          |
 | Apr 25 | `a4facdf` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |          |
 | Apr 24 | `c016635` | 6.71 | 22.81 | 13.77 | 23.83 | 0.89 | 211.38 | 62.22 | 16.09 | 69.23 | 209.67 | :left_right_arrow:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :left_right_arrow:    :arrow_down:  :arrow_up:  |
 | Apr 23 | `c689f77` | 6.60 | 22.62 | 13.03 | 23.68 | 0.88 | N/A | N/A | 16.75 | 58.19 | N/A | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:    :arrow_up:  :arrow_down:  |
@@ -84,23 +85,13 @@
 | Apr 09 | `2c4e113` | 6.71 | 22.93 | 13.20 | 23.80 | 0.89 | 210.35 | 62.16 | 14.71 | N/A | 206.54 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_down:   :left_right_arrow: |
 | Apr 08 | `dd73e9a` | 6.83 | 22.96 | 13.19 | 23.84 | 0.89 | 210.25 | 62.20 | 15.24 | N/A | 206.65 | :arrow_up:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
 | Apr 07 | `5cc246e` | 6.69 | 22.92 | 13.19 | 23.83 | 0.89 | 210.64 | 62.20 | 15.11 | N/A | 207.62 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_up:   :left_right_arrow: |
-| Apr 06 | `93109cc` | 6.70 | 22.86 | 13.61 | 23.92 | 0.89 | 210.73 | 62.15 | 14.13 | N/A | 207.67 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
-| Apr 05 | `70658bf` | 6.68 | 22.80 | 14.12 | 23.80 | 0.88 | 209.31 | 62.15 | 14.06 | N/A | 204.55 | -- |
+| Apr 06 | `93109cc` | 6.70 | 22.86 | 13.61 | 23.92 | 0.89 | 210.73 | 62.15 | 14.13 | N/A | 207.67 | -- |
 
 > [!CAUTION]
 > **Action Required — Performance Alert**
 >
 > The following cases need attention:
-> - flux1_dev_t2i_1024: SGLang latency is N/A (broken)
-> - flux2_dev_t2i_1024: SGLang latency is N/A (broken)
-> - qwen_image_2512_t2i_1024: SGLang latency is N/A (broken)
-> - qwen_image_edit_2511: SGLang latency is N/A (broken)
-> - zimage_turbo_t2i_1024: SGLang latency is N/A (broken)
-> - wan22_t2v_a14b_720p: SGLang latency is N/A (broken)
-> - wan22_ti2v_5b_720p: SGLang latency is N/A (broken)
-> - ltx2_twostage_t2v: SGLang latency is N/A (broken)
 > - ltx2.3_twostage_ti2v_2gpus: SGLang latency is N/A (broken)
-> - wan22_i2v_a14b_720p: SGLang latency is N/A (broken)
 
 
 ---
