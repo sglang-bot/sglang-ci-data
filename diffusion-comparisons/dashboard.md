@@ -1,21 +1,21 @@
 # Diffusion Cross-Framework Performance Dashboard
 
-*Generated: Apr 26 | Commit: `7141735`*
+*Generated: Apr 27 | Commit: `977830e`*
 
 ## Cross-Framework Performance Comparison
 
 | Model | Risk | sglang (s) |
 |-------|------|---------|
-| FLUX.1-dev | ✅ | **6.71** |
-| FLUX.2-dev | ✅ | **22.84** |
+| FLUX.1-dev | ✅ | **6.72** |
+| FLUX.2-dev | ✅ | **22.91** |
 | Qwen-Image-2512 | ✅ | **13.24** |
-| Qwen-Image-Edit-2511 | ✅ | **23.89** |
+| Qwen-Image-Edit-2511 | ✅ | **23.91** |
 | Z-Image-Turbo | ✅ | **0.89** |
-| Wan2.2-T2V-A14B-Diffusers | ✅ | **212.74** |
-| Wan2.2-TI2V-5B-Diffusers | ✅ | **62.22** |
-| LTX-2 | ✅ | **11.86** |
+| Wan2.2-T2V-A14B-Diffusers | ✅ | **212.10** |
+| Wan2.2-TI2V-5B-Diffusers | ✅ | **63.20** |
+| LTX-2 | ✅ | **11.80** |
 | LTX-2.3 | ❌ | N/A |
-| Wan2.2-I2V-A14B-Diffusers | ✅ | **208.55** |
+| Wan2.2-I2V-A14B-Diffusers | ✅ | **208.53** |
 
 ### Latency Trend: flux1_dev_t2i_1024
 
@@ -71,6 +71,7 @@
 
 | Date | Commit | flux1_dev_t2i_1024 (s) | flux2_dev_t2i_1024 (s) | qwen_image_2512_t2i_1024 (s) | qwen_image_edit_2511 (s) | zimage_turbo_t2i_1024 (s) | wan22_t2v_a14b_720p (s) | wan22_ti2v_5b_720p (s) | ltx2_twostage_t2v (s) | ltx2.3_twostage_ti2v_2gpus (s) | wan22_i2v_a14b_720p (s) | Trend |
 |------|--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|-------|
+| Apr 27 | `977830e` | 6.72 | 22.91 | 13.24 | 23.91 | 0.89 | 212.10 | 63.20 | 11.80 | N/A | 208.53 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
 | Apr 26 | `7141735` | 6.71 | 22.84 | 13.24 | 23.89 | 0.89 | 212.74 | 62.22 | 11.86 | N/A | 208.55 |          |
 | Apr 25 | `a4facdf` | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |          |
 | Apr 24 | `c016635` | 6.71 | 22.81 | 13.77 | 23.83 | 0.89 | 211.38 | 62.22 | 16.09 | 69.23 | 209.67 | :left_right_arrow:  :left_right_arrow:  :arrow_up:  :left_right_arrow:  :left_right_arrow:    :arrow_down:  :arrow_up:  |
@@ -84,8 +85,7 @@
 | Apr 10 | `5638d40` | 6.68 | 22.78 | 13.16 | 23.76 | 0.88 | 209.41 | 62.16 | 14.21 | N/A | 204.58 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_down:   :left_right_arrow: |
 | Apr 09 | `2c4e113` | 6.71 | 22.93 | 13.20 | 23.80 | 0.89 | 210.35 | 62.16 | 14.71 | N/A | 206.54 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_down:   :left_right_arrow: |
 | Apr 08 | `dd73e9a` | 6.83 | 22.96 | 13.19 | 23.84 | 0.89 | 210.25 | 62.20 | 15.24 | N/A | 206.65 | :arrow_up:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
-| Apr 07 | `5cc246e` | 6.69 | 22.92 | 13.19 | 23.83 | 0.89 | 210.64 | 62.20 | 15.11 | N/A | 207.62 | :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_up:   :left_right_arrow: |
-| Apr 06 | `93109cc` | 6.70 | 22.86 | 13.61 | 23.92 | 0.89 | 210.73 | 62.15 | 14.13 | N/A | 207.67 | -- |
+| Apr 07 | `5cc246e` | 6.69 | 22.92 | 13.19 | 23.83 | 0.89 | 210.64 | 62.20 | 15.11 | N/A | 207.62 | -- |
 
 > [!CAUTION]
 > **Action Required — Performance Alert**
