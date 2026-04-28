@@ -1,0 +1,786 @@
+[
+  {
+    "case_id": "fast_hunyuan_video",
+    "file": "fast_hunyuan_video_1gpu_frame_0.png",
+    "official_file": "fast_hunyuan_video_1gpu_frame_0.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.6616477966308594,
+    "ssim": 0.14400061077258317,
+    "psnr": 10.988013134142719,
+    "mean_abs_diff": 58.95749282836914,
+    "passed": false,
+    "native_shape": [
+      720,
+      1280,
+      3
+    ],
+    "official_shape": [
+      720,
+      1280,
+      3
+    ]
+  },
+  {
+    "case_id": "fast_hunyuan_video",
+    "file": "fast_hunyuan_video_1gpu_frame_mid.png",
+    "official_file": "fast_hunyuan_video_1gpu_frame_mid.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.6874133348464966,
+    "ssim": 0.13669263567823794,
+    "psnr": 10.983099785811035,
+    "mean_abs_diff": 59.08686447143555,
+    "passed": false,
+    "native_shape": [
+      720,
+      1280,
+      3
+    ],
+    "official_shape": [
+      720,
+      1280,
+      3
+    ]
+  },
+  {
+    "case_id": "fast_hunyuan_video",
+    "file": "fast_hunyuan_video_1gpu_frame_last.png",
+    "official_file": "fast_hunyuan_video_1gpu_frame_last.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.6759727001190186,
+    "ssim": 0.14390322774576658,
+    "psnr": 11.075676309980764,
+    "mean_abs_diff": 58.34349060058594,
+    "passed": false,
+    "native_shape": [
+      720,
+      1280,
+      3
+    ],
+    "official_shape": [
+      720,
+      1280,
+      3
+    ]
+  },
+  {
+    "case_id": "flux_2_image_t2i",
+    "file": "flux_2_image_t2i_1gpu.jpg",
+    "official_file": "flux_2_image_t2i_1gpu.jpg",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9917348623275757,
+    "ssim": 0.8940993557887585,
+    "psnr": 19.708704463840142,
+    "mean_abs_diff": 9.400298118591309,
+    "passed": false,
+    "native_shape": [
+      1024,
+      1024,
+      3
+    ],
+    "official_shape": [
+      1024,
+      1024,
+      3
+    ]
+  },
+  {
+    "case_id": "flux_2_image_t2i_upscaling_4x",
+    "file": "flux_2_image_t2i_upscaling_4x_1gpu.jpg",
+    "official_file": "flux_2_image_t2i_upscaling_4x_1gpu.jpg",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "flux_2_klein_image_t2i",
+    "file": "flux_2_klein_image_t2i_1gpu.jpg",
+    "official_file": "flux_2_klein_image_t2i_1gpu.jpg",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.980076253414154,
+    "ssim": 0.9224602751510718,
+    "psnr": 25.172544018395477,
+    "mean_abs_diff": 4.6907057762146,
+    "passed": true,
+    "native_shape": [
+      1024,
+      1024,
+      3
+    ],
+    "official_shape": [
+      1024,
+      1024,
+      3
+    ]
+  },
+  {
+    "case_id": "flux_2_t2i_customized_vae_path",
+    "file": "flux_2_t2i_customized_vae_path_1gpu.jpg",
+    "official_file": "flux_2_t2i_customized_vae_path_1gpu.jpg",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "flux_2_ti2i",
+    "file": "flux_2_ti2i_1gpu.jpg",
+    "official_file": "flux_2_ti2i_1gpu.jpg",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9732991456985474,
+    "ssim": 0.8933359374185375,
+    "psnr": 20.361073262601543,
+    "mean_abs_diff": 12.708687782287598,
+    "passed": false,
+    "native_shape": [
+      832,
+      1248,
+      3
+    ],
+    "official_shape": [
+      832,
+      1248,
+      3
+    ]
+  },
+  {
+    "case_id": "flux_2_ti2i_multi_image_cache_dit",
+    "file": "flux_2_ti2i_multi_image_cache_dit_1gpu.jpg",
+    "official_file": "flux_2_ti2i_multi_image_cache_dit_1gpu.jpg",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "flux_image_t2i",
+    "file": "flux_image_t2i_1gpu.jpg",
+    "official_file": "flux_image_t2i_1gpu.jpg",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.992755651473999,
+    "ssim": 0.9722332363757952,
+    "psnr": 29.172705890411308,
+    "mean_abs_diff": 2.356761932373047,
+    "passed": true,
+    "native_shape": [
+      1024,
+      1024,
+      3
+    ],
+    "official_shape": [
+      1024,
+      1024,
+      3
+    ]
+  },
+  {
+    "case_id": "layerwise_offload",
+    "file": "layerwise_offload_1gpu.jpg",
+    "official_file": "layerwise_offload_1gpu.jpg",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "ltx_2.3_one_stage_ti2v",
+    "file": "ltx_2.3_one_stage_ti2v_2gpu_frame_0.png",
+    "official_file": "ltx_2.3_one_stage_ti2v_2gpu_frame_0.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9818258881568909,
+    "ssim": 0.9638860151001011,
+    "psnr": 36.974272918816936,
+    "mean_abs_diff": 2.2683725357055664,
+    "passed": false
+  },
+  {
+    "case_id": "ltx_2.3_one_stage_ti2v",
+    "file": "ltx_2.3_one_stage_ti2v_2gpu_frame_mid.png",
+    "official_file": "ltx_2.3_one_stage_ti2v_2gpu_frame_mid.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.8274725079536438,
+    "ssim": 0.6877488052377956,
+    "psnr": 18.26176369432087,
+    "mean_abs_diff": 16.878089904785156,
+    "passed": false
+  },
+  {
+    "case_id": "ltx_2.3_one_stage_ti2v",
+    "file": "ltx_2.3_one_stage_ti2v_2gpu_frame_last.png",
+    "official_file": "ltx_2.3_one_stage_ti2v_2gpu_frame_last.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.849204421043396,
+    "ssim": 0.6733478287019418,
+    "psnr": 17.29613953969978,
+    "mean_abs_diff": 18.38913345336914,
+    "passed": false
+  },
+  {
+    "case_id": "ltx_2.3_two_stage_t2v_2gpus",
+    "file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.png",
+    "official_file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_0.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.8481553792953491,
+    "ssim": 0.271667783817049,
+    "psnr": 13.753272886820193,
+    "mean_abs_diff": 40.9495964050293,
+    "passed": false
+  },
+  {
+    "case_id": "ltx_2.3_two_stage_t2v_2gpus",
+    "file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.png",
+    "official_file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_mid.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.8331456780433655,
+    "ssim": 0.23378027957556258,
+    "psnr": 13.744305889999824,
+    "mean_abs_diff": 40.83750915527344,
+    "passed": false
+  },
+  {
+    "case_id": "ltx_2.3_two_stage_t2v_2gpus",
+    "file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.png",
+    "official_file": "ltx_2.3_two_stage_t2v_2gpus_2gpu_frame_last.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.8280659317970276,
+    "ssim": 0.2240133449340785,
+    "psnr": 13.521193735031623,
+    "mean_abs_diff": 41.8500862121582,
+    "passed": false
+  },
+  {
+    "case_id": "qwen_image_edit_2509_ti2i",
+    "file": "qwen_image_edit_2509_ti2i_1gpu.jpg",
+    "official_file": "qwen_image_edit_2509_ti2i_1gpu.jpg",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.8620008230209351,
+    "ssim": 0.6300019579072096,
+    "psnr": 12.369068980356744,
+    "mean_abs_diff": 31.79973793029785,
+    "passed": false,
+    "native_shape": [
+      1024,
+      1024,
+      3
+    ],
+    "official_shape": [
+      1024,
+      1024,
+      3
+    ]
+  },
+  {
+    "case_id": "qwen_image_edit_2511_ti2i",
+    "file": "qwen_image_edit_2511_ti2i_1gpu.jpg",
+    "official_file": "qwen_image_edit_2511_ti2i_1gpu.jpg",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9852614998817444,
+    "ssim": 0.9674369075418662,
+    "psnr": 26.921621005178267,
+    "mean_abs_diff": 9.703388214111328,
+    "passed": false,
+    "native_shape": [
+      832,
+      1248,
+      3
+    ],
+    "official_shape": [
+      832,
+      1248,
+      3
+    ]
+  },
+  {
+    "case_id": "qwen_image_edit_ti2i",
+    "file": "qwen_image_edit_ti2i_1gpu.jpg",
+    "official_file": "qwen_image_edit_ti2i_1gpu.jpg",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9889646172523499,
+    "ssim": 0.9505839961779912,
+    "psnr": 26.620961241068336,
+    "mean_abs_diff": 8.404410362243652,
+    "passed": false,
+    "native_shape": [
+      832,
+      1248,
+      3
+    ],
+    "official_shape": [
+      832,
+      1248,
+      3
+    ]
+  },
+  {
+    "case_id": "qwen_image_layered_i2i",
+    "file": "qwen_image_layered_i2i_1gpu.png",
+    "official_file": "qwen_image_layered_i2i_1gpu.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9979161620140076,
+    "ssim": 0.9568795346749629,
+    "psnr": 33.25857872650154,
+    "mean_abs_diff": 3.0522730350494385,
+    "passed": true,
+    "native_shape": [
+      640,
+      640,
+      3
+    ],
+    "official_shape": [
+      640,
+      640,
+      3
+    ]
+  },
+  {
+    "case_id": "qwen_image_t2i",
+    "file": "qwen_image_t2i_1gpu.jpg",
+    "official_file": "qwen_image_t2i_1gpu.jpg",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9984802007675171,
+    "ssim": 0.9321620578199505,
+    "psnr": 22.988291695864866,
+    "mean_abs_diff": 4.348373889923096,
+    "passed": true,
+    "native_shape": [
+      1024,
+      1024,
+      3
+    ],
+    "official_shape": [
+      1024,
+      1024,
+      3
+    ]
+  },
+  {
+    "case_id": "qwen_image_t2i_cache_dit_enabled",
+    "file": "qwen_image_t2i_cache_dit_enabled_1gpu.jpg",
+    "official_file": "qwen_image_t2i_cache_dit_enabled_1gpu.jpg",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b",
+    "file": "wan2_1_t2v_1.3b_1gpu_frame_0.png",
+    "official_file": "wan2_1_t2v_1.3b_1gpu_frame_0.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9941657185554504,
+    "ssim": 0.8655712276163913,
+    "psnr": 25.554463647958148,
+    "mean_abs_diff": 6.594210624694824,
+    "passed": true,
+    "native_shape": [
+      480,
+      832,
+      3
+    ],
+    "official_shape": [
+      480,
+      832,
+      3
+    ]
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b",
+    "file": "wan2_1_t2v_1.3b_1gpu_frame_mid.png",
+    "official_file": "wan2_1_t2v_1.3b_1gpu_frame_mid.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9968023300170898,
+    "ssim": 0.8913497848333946,
+    "psnr": 26.706546601132214,
+    "mean_abs_diff": 5.790343761444092,
+    "passed": true,
+    "native_shape": [
+      480,
+      832,
+      3
+    ],
+    "official_shape": [
+      480,
+      832,
+      3
+    ]
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b",
+    "file": "wan2_1_t2v_1.3b_1gpu_frame_last.png",
+    "official_file": "wan2_1_t2v_1.3b_1gpu_frame_last.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9925023913383484,
+    "ssim": 0.8651444993455186,
+    "psnr": 25.758518954450725,
+    "mean_abs_diff": 6.681014537811279,
+    "passed": true,
+    "native_shape": [
+      480,
+      832,
+      3
+    ],
+    "official_shape": [
+      480,
+      832,
+      3
+    ]
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_frame_interp_2x",
+    "file": "wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_0.png",
+    "official_file": "wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_0.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_frame_interp_2x",
+    "file": "wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_mid.png",
+    "official_file": "wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_mid.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_frame_interp_2x",
+    "file": "wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_last.png",
+    "official_file": "wan2_1_t2v_1.3b_frame_interp_2x_1gpu_frame_last.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x",
+    "file": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_0.png",
+    "official_file": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_0.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x",
+    "file": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_mid.png",
+    "official_file": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_mid.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x",
+    "file": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_last.png",
+    "official_file": "wan2_1_t2v_1.3b_frame_interp_2x_upscaling_4x_1gpu_frame_last.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_teacache_enabled",
+    "file": "wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_0.png",
+    "official_file": "wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_0.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_teacache_enabled",
+    "file": "wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_mid.png",
+    "official_file": "wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_mid.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_teacache_enabled",
+    "file": "wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_last.png",
+    "official_file": "wan2_1_t2v_1.3b_teacache_enabled_1gpu_frame_last.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_text_encoder_cpu_offload",
+    "file": "wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_0.png",
+    "official_file": "wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_0.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_text_encoder_cpu_offload",
+    "file": "wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_mid.png",
+    "official_file": "wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_mid.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_text_encoder_cpu_offload",
+    "file": "wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_last.png",
+    "official_file": "wan2_1_t2v_1.3b_text_encoder_cpu_offload_1gpu_frame_last.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_upscaling_4x",
+    "file": "wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_0.png",
+    "official_file": "wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_0.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_upscaling_4x",
+    "file": "wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_mid.png",
+    "official_file": "wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_mid.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1.3b_upscaling_4x",
+    "file": "wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_last.png",
+    "official_file": "wan2_1_t2v_1.3b_upscaling_4x_1gpu_frame_last.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1_3b_lora_1gpu",
+    "file": "wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_0.png",
+    "official_file": "wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_0.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1_3b_lora_1gpu",
+    "file": "wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_mid.png",
+    "official_file": "wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_mid.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_1_t2v_1_3b_lora_1gpu",
+    "file": "wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_last.png",
+    "official_file": "wan2_1_t2v_1_3b_lora_1gpu_1gpu_frame_last.png",
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null
+  },
+  {
+    "case_id": "wan2_2_ti2v_5b",
+    "file": "wan2_2_ti2v_5b_1gpu_frame_0.png",
+    "official_file": "wan2_2_ti2v_5b_1gpu_frame_0.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9975478649139404,
+    "ssim": 0.9650011135047691,
+    "psnr": 37.9423461405444,
+    "mean_abs_diff": 2.040480136871338,
+    "passed": true,
+    "native_shape": [
+      928,
+      960,
+      3
+    ],
+    "official_shape": [
+      928,
+      960,
+      3
+    ]
+  },
+  {
+    "case_id": "wan2_2_ti2v_5b",
+    "file": "wan2_2_ti2v_5b_1gpu_frame_mid.png",
+    "official_file": "wan2_2_ti2v_5b_1gpu_frame_mid.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.8890851736068726,
+    "ssim": 0.6660218346540407,
+    "psnr": 18.629299866116668,
+    "mean_abs_diff": 14.491893768310547,
+    "passed": false,
+    "native_shape": [
+      928,
+      960,
+      3
+    ],
+    "official_shape": [
+      928,
+      960,
+      3
+    ]
+  },
+  {
+    "case_id": "wan2_2_ti2v_5b",
+    "file": "wan2_2_ti2v_5b_1gpu_frame_last.png",
+    "official_file": "wan2_2_ti2v_5b_1gpu_frame_last.png",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.7764816284179688,
+    "ssim": 0.582157734185181,
+    "psnr": 14.80123815771452,
+    "mean_abs_diff": 24.942951202392578,
+    "passed": false,
+    "native_shape": [
+      928,
+      960,
+      3
+    ],
+    "official_shape": [
+      928,
+      960,
+      3
+    ]
+  },
+  {
+    "case_id": "zimage_image_t2i",
+    "file": "zimage_image_t2i_1gpu.jpg",
+    "official_file": "zimage_image_t2i_1gpu.jpg",
+    "status": "official_comparable",
+    "shape_match": true,
+    "clip_similarity": 0.9910540580749512,
+    "ssim": 0.9439175302585814,
+    "psnr": 26.468708009790824,
+    "mean_abs_diff": 3.5441367626190186,
+    "passed": true,
+    "native_shape": [
+      1024,
+      1024,
+      3
+    ],
+    "official_shape": [
+      1024,
+      1024,
+      3
+    ]
+  },
+  {
+    "case_id": "zimage_image_t2i_fp8",
+    "file": "zimage_image_t2i_fp8_1gpu.jpg",
+    "official_file": null,
+    "status": "native_only_excluded",
+    "shape_match": null,
+    "clip_similarity": null,
+    "ssim": null,
+    "psnr": null,
+    "mean_abs_diff": null,
+    "passed": null,
+    "native_shape": [
+      1024,
+      1024,
+      3
+    ],
+    "official_shape": null
+  }
+]
