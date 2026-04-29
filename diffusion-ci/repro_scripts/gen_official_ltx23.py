@@ -51,7 +51,7 @@ IMAGE_URL = (
     "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/5f/fa/56/"
     "5ffa56c2-ea1f-7a17-6bad-192ff9b6476d/825646124206.jpg/600x600bb.jpg"
 )
-SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT = True
+SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT = False
 
 
 def parse_args():
@@ -77,9 +77,9 @@ def parse_args():
     )
     parser.add_argument("--decode-audio", action="store_true")
     parser.add_argument(
-        "--enable-v2a-cross-attn",
+        "--skip-v2a-cross-attn-for-video-gt",
         action="store_true",
-        help="Keep the official video-to-audio cross-attention branch. This is more faithful but currently OOMs on a single H200 for the CI-sized LTX-2.3 case.",
+        help="Disable the video-to-audio cross-attention branch to reproduce the legacy CI GT.",
     )
     return parser.parse_args()
 
@@ -420,7 +420,7 @@ def main() -> None:
     global OUT_DIR, SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT
     args = parse_args()
     OUT_DIR = Path(args.out_dir)
-    SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT = not args.enable_v2a_cross_attn
+    SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT = args.skip_v2a_cross_attn_for_video_gt
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     enable_low_memory_official_ltx()
     torch.backends.cuda.enable_cudnn_sdp(True)
