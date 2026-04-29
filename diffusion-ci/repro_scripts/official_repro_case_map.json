@@ -29,7 +29,7 @@
     },
     {
       "file": "gen_official_ltx23.py",
-      "sha256": "93f3a565b5c75c15748cf801e427a3f7c03dbbbe5891c33827ee5e827ff89f7b"
+      "sha256": "2804117676494dcbb6c9b9e35ce6db05b152bcab3d2ecb5ffab72ede0ddf524d"
     },
     {
       "file": "gen_official_wan22_ti2v.py",
@@ -37,7 +37,7 @@
     },
     {
       "file": "official_repro_case_map.json",
-      "sha256": "fde22047abf43f96f02aad2a062be00593290e371168d139148d4daa374b5127"
+      "sha256": "993fc842d07ad8575b2a0df209af44fb64df93bb19b5597d491635263cf821f5"
     },
     {
       "file": "run_official_diffusers_cases.sh",
@@ -45,7 +45,7 @@
     },
     {
       "file": "run_official_ltx23.sh",
-      "sha256": "e42be87e1a8e2b192f03eac5653f354d13041c618a710cf4793cbaa57129dc9d"
+      "sha256": "8de0bb0945264e74b6ee61bbce3258a000542e80808f7c8aa7a4e30ac5923885"
     },
     {
       "file": "run_official_wan21.sh",
@@ -154,9 +154,9 @@
       "repro_script": "gen_official_ltx23.py",
       "wrapper": "run_official_ltx23.sh",
       "official_source": "LTX official ltx-pipelines repository with official 22B checkpoint",
-      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-v2a-default-report",
-      "notes": "Official GT regenerated on H200 with faithful V2A cross-attention enabled and the official batched guided-denoiser path; use --skip-v2a-cross-attn-for-video-gt only for legacy GT reproduction.",
-      "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-v2a-default-report"
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-denoiser-default-report",
+      "notes": "Official GT regenerated on H200 against Lightricks/LTX-2 commit 41d9243 with official batched guided-denoiser path and AttentionFunction.DEFAULT; no layer/block streaming or FlashInfer monkeypatch. Use --skip-v2a-cross-attn-for-video-gt only for legacy GT reproduction.",
+      "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-denoiser-default-report"
     },
     {
       "case_id": "ltx_2.3_two_stage_t2v_2gpus",
@@ -165,9 +165,9 @@
       "repro_script": "gen_official_ltx23.py",
       "wrapper": "run_official_ltx23.sh",
       "official_source": "LTX official ltx-pipelines repository with official 22B checkpoint",
-      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-repro-infer-both",
-      "notes": "Official GT regenerated on H200 with the official batched guided-denoiser path; current threshold update accepts the rerun metrics.",
-      "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-repro-infer-both"
+      "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-denoiser-default-report",
+      "notes": "Official GT regenerated on H200 against Lightricks/LTX-2 commit 41d9243 with official batched guided-denoiser path and AttentionFunction.DEFAULT; no layer/block streaming or FlashInfer monkeypatch. Use --skip-v2a-cross-attn-for-video-gt only for legacy GT reproduction.",
+      "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-denoiser-default-report"
     },
     {
       "case_id": "qwen_image_edit_2509_ti2i",

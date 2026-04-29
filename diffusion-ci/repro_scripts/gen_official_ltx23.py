@@ -11,14 +11,10 @@ from urllib.request import urlretrieve
 import imageio
 import numpy as np
 import torch
-import torch.nn as nn
 from huggingface_hub import hf_hub_download
 from PIL import Image
 
-import ltx_core.layer_streaming as ltx_layer_streaming
-import ltx_core.model.transformer.attention as ltx_attention
 import ltx_pipelines.utils.denoisers as ltx_denoisers
-import ltx_pipelines.utils.blocks as ltx_blocks
 from ltx_core.components.guiders import MultiModalGuiderParams
 from ltx_core.guidance.perturbations import (
     BatchedPerturbationConfig,
@@ -38,12 +34,6 @@ from sglang.multimodal_gen.test.test_utils import (
     _consistency_gt_filenames,
     extract_key_frames_from_video,
 )
-
-try:
-    import flashinfer
-except ImportError:
-    flashinfer = None
-
 
 REPO_ID = "Lightricks/LTX-2.3"
 OUT_DIR = Path("/tmp/mmgen-official-ltx23-report")
@@ -69,7 +59,6 @@ def parse_args():
     parser.add_argument("--fps", type=int, default=24)
     parser.add_argument("--steps", type=int, default=30)
     parser.add_argument("--device", default="cuda:0")
-    parser.add_argument("--streaming-prefetch-count", type=int, default=0)
     parser.add_argument(
         "--quantization",
         choices=["none", "fp8-cast", "fp8-scaled-mm"],
@@ -96,6 +85,7 @@ class NoopAudioDecoder:
     def __call__(self, latent):
         return None
 
+
 VIDEO_GUIDER = MultiModalGuiderParams(
     cfg_scale=3.0,
     stg_scale=1.0,
@@ -112,79 +102,6 @@ AUDIO_GUIDER = MultiModalGuiderParams(
     skip_step=0,
     stg_blocks=[28],
 )
-
-
-class LowMemoryLayerStreamingWrapper(ltx_layer_streaming.LayerStreamingWrapper):
-    def __init__(
-        self,
-        model: nn.Module,
-        layers_attr: str,
-        target_device: torch.device,
-        prefetch_count: int = 0,
-    ) -> None:
-        nn.Module.__init__(self)
-        self._model = model
-        self._layers = ltx_layer_streaming._resolve_attr(model, layers_attr)
-        self._target_device = target_device
-        self._prefetch_count = min(max(prefetch_count, 0), len(self._layers) - 1)
-        self._hooks = []
-        self._setup()
-
-    def _setup(self) -> None:
-        self._store = ltx_layer_streaming._LayerStore(
-            self._layers, self._target_device
-        )
-
-        layer_tensor_ids: set[int] = set()
-        for layer in self._layers:
-            for tensor in ltx_layer_streaming.itertools.chain(
-                layer.parameters(), layer.buffers()
-            ):
-                layer_tensor_ids.add(id(tensor))
-
-        for param in self._model.parameters():
-            if id(param) not in layer_tensor_ids:
-                param.data = param.data.to(self._target_device)
-        for buffer in self._model.buffers():
-            if id(buffer) not in layer_tensor_ids:
-                buffer.data = buffer.data.to(self._target_device)
-
-        if len(self._layers):
-            self._store.move_to_gpu(0, self._layers[0])
-
-        self._prefetcher = None
-        self._register_hooks()
-
-    def _register_hooks(self) -> None:
-        idx_map: dict[int, int] = {
-            id(layer): idx for idx, layer in enumerate(self._layers)
-        }
-
-        def pre_hook(module: nn.Module, _args, *, idx: int) -> None:
-            if not self._store.is_on_gpu(idx):
-                self._store.move_to_gpu(idx, module)
-
-        def post_hook(module: nn.Module, _args, _output, *, idx: int) -> None:
-            torch.cuda.synchronize(device=self._target_device)
-            self._store.evict_to_cpu(idx, module)
-
-        for layer in self._layers:
-            idx = idx_map[id(layer)]
-            self._hooks.extend(
-                [
-                    layer.register_forward_pre_hook(
-                        ltx_layer_streaming.functools.partial(pre_hook, idx=idx)
-                    ),
-                    layer.register_forward_hook(
-                        ltx_layer_streaming.functools.partial(post_hook, idx=idx)
-                    ),
-                ]
-            )
-
-
-def enable_zero_prefetch_layer_streaming() -> None:
-    ltx_layer_streaming.LayerStreamingWrapper = LowMemoryLayerStreamingWrapper
-    ltx_blocks.LayerStreamingWrapper = LowMemoryLayerStreamingWrapper
 
 
 def sequential_guided_denoise(
@@ -298,41 +215,11 @@ def sequential_guided_denoise(
 
 
 def enable_low_memory_official_ltx() -> None:
-    enable_zero_prefetch_layer_streaming()
     if SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT:
         # Legacy CI GT skipped V2A for all guidance passes. The official
         # default denoiser does not expose that knob, so keep the old helper
         # only for explicit legacy reproduction.
         ltx_denoisers._guided_denoise = sequential_guided_denoise
-    if flashinfer is not None:
-        original_to_callable = ltx_attention.AttentionFunction.to_callable
-
-        class FlashInferAttention:
-            def __call__(self, q, k, v, heads: int, mask=None):
-                if mask is not None:
-                    return ltx_attention.PytorchAttention()(q, k, v, heads, mask)
-                batch, _, inner_dim = q.shape
-                dim_head = inner_dim // heads
-                q = q.view(batch, -1, heads, dim_head)
-                k = k.view(batch, -1, heads, dim_head)
-                v = v.view(batch, -1, heads, dim_head)
-                outs = [
-                    flashinfer.single_prefill_with_kv_cache(
-                        q[i].contiguous(),
-                        k[i].contiguous(),
-                        v[i].contiguous(),
-                        causal=False,
-                    )
-                    for i in range(batch)
-                ]
-                return torch.stack(outs, dim=0).reshape(batch, -1, inner_dim)
-
-        def to_callable(self):
-            if self is ltx_attention.AttentionFunction.DEFAULT:
-                return FlashInferAttention()
-            return original_to_callable(self)
-
-        ltx_attention.AttentionFunction.to_callable = to_callable
 
 
 def newest_materialized_ltx23_root() -> Path:
@@ -449,7 +336,7 @@ def main() -> None:
         "low_memory_overrides": {
             "torch_inference_mode": True,
             "fp8_quantization": args.quantization,
-            "layer_streaming": "synchronous per-layer eviction",
+            "component_lifecycle": "official component lifecycle; no layer/block streaming override",
             "guided_denoise": (
                 "legacy sequential guidance with global V2A skip"
                 if SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT
@@ -457,11 +344,7 @@ def main() -> None:
             ),
             "skip_v2a_cross_attn_for_video_gt": SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT,
             "decode_audio": bool(args.decode_audio),
-            "attention": (
-                "flashinfer.single_prefill_with_kv_cache"
-                if flashinfer is not None
-                else "official default attention"
-            ),
+            "attention": "official AttentionFunction.DEFAULT",
         },
         "checkpoint_path": checkpoint_path,
         "materialized_root": str(materialized),
@@ -506,7 +389,6 @@ def main() -> None:
             audio_guider_params=AUDIO_GUIDER,
             images=[],
             tiling_config=tiling_config,
-            streaming_prefetch_count=args.streaming_prefetch_count,
             max_batch_size=1,
         )
             frames = collect_video_frames(video)
@@ -573,7 +455,6 @@ def main() -> None:
                     crf=33,
                 )
             ],
-            streaming_prefetch_count=args.streaming_prefetch_count,
             max_batch_size=1,
         )
             frames = collect_video_frames(video)
