@@ -3,9 +3,9 @@ set -euo pipefail
 
 # Set HF_TOKEN in the environment before running. Do not hardcode it here.
 # Reproduces faithful LTX-2.3 official-repo video key frames with the same
-# CI-sized sampling params. Verified on a single H200 with fp8-cast +
-# inference_mode. Pass --skip-v2a-cross-attn-for-video-gt to reproduce the
-# older legacy GT behavior.
+# CI-sized sampling params. The default path keeps the official batched
+# guided-denoiser semantics with max_batch_size=1. Pass
+# --skip-v2a-cross-attn-for-video-gt to reproduce the older legacy GT behavior.
 OUT_DIR=${1:-/tmp/mmgen-official-ltx23-report}
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 export PYTHONPATH=/tmp/mmgen-official-code/LTX-2/packages/ltx-core/src:/tmp/mmgen-official-code/LTX-2/packages/ltx-pipelines/src:/sgl-workspace/sglang/python:$PYTHONPATH

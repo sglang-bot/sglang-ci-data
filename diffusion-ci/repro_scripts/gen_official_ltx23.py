@@ -299,7 +299,11 @@ def sequential_guided_denoise(
 
 def enable_low_memory_official_ltx() -> None:
     enable_zero_prefetch_layer_streaming()
-    ltx_denoisers._guided_denoise = sequential_guided_denoise
+    if SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT:
+        # Legacy CI GT skipped V2A for all guidance passes. The official
+        # default denoiser does not expose that knob, so keep the old helper
+        # only for explicit legacy reproduction.
+        ltx_denoisers._guided_denoise = sequential_guided_denoise
     if flashinfer is not None:
         original_to_callable = ltx_attention.AttentionFunction.to_callable
 
@@ -446,7 +450,11 @@ def main() -> None:
             "torch_inference_mode": True,
             "fp8_quantization": args.quantization,
             "layer_streaming": "synchronous per-layer eviction",
-            "guided_denoise": "sequential guidance passes",
+            "guided_denoise": (
+                "legacy sequential guidance with global V2A skip"
+                if SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT
+                else "official batched guidance passes (max_batch_size=1 default)"
+            ),
             "skip_v2a_cross_attn_for_video_gt": SKIP_V2A_CROSS_ATTN_FOR_VIDEO_GT,
             "decode_audio": bool(args.decode_audio),
             "attention": (

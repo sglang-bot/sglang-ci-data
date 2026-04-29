@@ -29,7 +29,7 @@
     },
     {
       "file": "gen_official_ltx23.py",
-      "sha256": "bce04f49c53b03e4058c10cd80606371a438f8b3ba9528d0bc3e8965b778c688"
+      "sha256": "93f3a565b5c75c15748cf801e427a3f7c03dbbbe5891c33827ee5e827ff89f7b"
     },
     {
       "file": "gen_official_wan22_ti2v.py",
@@ -37,7 +37,7 @@
     },
     {
       "file": "official_repro_case_map.json",
-      "sha256": "08388185b4fd1e75a981b9e3656f8b188dd54292839f654bc3d15d150415bb0e"
+      "sha256": "fde22047abf43f96f02aad2a062be00593290e371168d139148d4daa374b5127"
     },
     {
       "file": "run_official_diffusers_cases.sh",
@@ -45,7 +45,7 @@
     },
     {
       "file": "run_official_ltx23.sh",
-      "sha256": "0119dc22da295e1afb15a7a6408e98e566d350baabcfa0d4d6e1427c23c5a131"
+      "sha256": "e42be87e1a8e2b192f03eac5653f354d13041c618a710cf4793cbaa57129dc9d"
     },
     {
       "file": "run_official_wan21.sh",
@@ -155,7 +155,7 @@
       "wrapper": "run_official_ltx23.sh",
       "official_source": "LTX official ltx-pipelines repository with official 22B checkpoint",
       "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-v2a-default-report",
-      "notes": "Official GT regenerated on H200 with faithful V2A cross-attention enabled by default; use --skip-v2a-cross-attn-for-video-gt only for legacy GT reproduction.",
+      "notes": "Official GT regenerated on H200 with faithful V2A cross-attention enabled and the official batched guided-denoiser path; use --skip-v2a-cross-attn-for-video-gt only for legacy GT reproduction.",
       "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-v2a-default-report"
     },
     {
@@ -166,7 +166,7 @@
       "wrapper": "run_official_ltx23.sh",
       "official_source": "LTX official ltx-pipelines repository with official 22B checkpoint",
       "artifact_dir_used_in_report": "/tmp/mmgen-official-ltx23-repro-infer-both",
-      "notes": "Official GT regenerated successfully on H200; current threshold update accepts the rerun metrics.",
+      "notes": "Official GT regenerated on H200 with the official batched guided-denoiser path; current threshold update accepts the rerun metrics.",
       "latest_verified_artifact_dir": "/tmp/mmgen-official-ltx23-repro-infer-both"
     },
     {
