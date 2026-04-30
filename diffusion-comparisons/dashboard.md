@@ -1,21 +1,21 @@
 # Diffusion Cross-Framework Performance Dashboard
 
-*Generated: Apr 29 | Commit: `14b4e6f`*
+*Generated: Apr 30 | Commit: `3553fd0`*
 
 ## Cross-Framework Performance Comparison
 
 | Model | Risk | sglang (s) |
 |-------|------|---------|
-| FLUX.1-dev | ✅ | **6.69** |
-| FLUX.2-dev | ✅ | **22.78** |
-| Qwen-Image-2512 | ✅ | **13.16** |
-| Qwen-Image-Edit-2511 | ✅ | **23.84** |
-| Z-Image-Turbo | ✅ | **0.89** |
-| Wan2.2-T2V-A14B-Diffusers | ✅ | **210.95** |
-| Wan2.2-TI2V-5B-Diffusers | ✅ | **62.20** |
-| LTX-2 | ✅ | **11.88** |
+| FLUX.1-dev | ✅ | **6.74** |
+| FLUX.2-dev | ✅ | **22.93** |
+| Qwen-Image-2512 | ✅ | **13.25** |
+| Qwen-Image-Edit-2511 | ✅ | **24.03** |
+| Z-Image-Turbo | ✅ | **0.90** |
+| Wan2.2-T2V-A14B-Diffusers | ✅ | **212.47** |
+| Wan2.2-TI2V-5B-Diffusers | ✅ | **62.18** |
+| LTX-2 | ✅ | **11.99** |
 | LTX-2.3 | ❌ | N/A |
-| Wan2.2-I2V-A14B-Diffusers | ✅ | **207.67** |
+| Wan2.2-I2V-A14B-Diffusers | ✅ | **207.63** |
 
 ### Latency Trend: flux1_dev_t2i_1024
 
@@ -71,6 +71,7 @@
 
 | Date | Commit | flux1_dev_t2i_1024 (s) | flux2_dev_t2i_1024 (s) | qwen_image_2512_t2i_1024 (s) | qwen_image_edit_2511 (s) | zimage_turbo_t2i_1024 (s) | wan22_t2v_a14b_720p (s) | wan22_ti2v_5b_720p (s) | ltx2_twostage_t2v (s) | ltx2.3_twostage_ti2v_2gpus (s) | wan22_i2v_a14b_720p (s) | Trend |
 |------|--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|---------|-------|
+| Apr 30 | `3553fd0` | 6.74 | 22.93 | 13.25 | 24.03 | 0.90 | 212.47 | 62.18 | 11.99 | N/A | 207.63 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
 | Apr 29 | `14b4e6f` | 6.69 | 22.78 | 13.16 | 23.84 | 0.89 | 210.95 | 62.20 | 11.88 | N/A | 207.67 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
 | Apr 28 | `4a04a98` | 6.69 | 22.75 | 13.28 | 23.89 | 0.89 | 211.33 | 61.19 | 11.84 | N/A | 208.57 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_down:  :left_right_arrow:   :left_right_arrow: |
 | Apr 27 | `977830e` | 6.72 | 22.91 | 13.24 | 23.91 | 0.89 | 212.10 | 63.20 | 11.80 | N/A | 208.53 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
@@ -84,8 +85,7 @@
 | Apr 15 | `2c9e76d` | 6.69 | 22.78 | 13.14 | 23.82 | 0.89 | 209.49 | 63.18 | 14.97 | N/A | 206.58 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_up:   :left_right_arrow: |
 | Apr 14 | `c456cba` | 6.70 | 22.85 | 13.17 | 23.83 | 0.89 | 210.52 | 62.16 | 14.58 | N/A | 206.54 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:   :left_right_arrow: |
 | Apr 13 | `37fc47c` | 6.60 | 22.61 | 12.99 | 23.60 | 0.88 | 209.76 | 61.17 | 14.74 | N/A | 207.63 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_up:   :left_right_arrow: |
-| Apr 10 | `5638d40` | 6.68 | 22.78 | 13.16 | 23.76 | 0.88 | 209.41 | 62.16 | 14.21 | N/A | 204.58 | :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :left_right_arrow:  :arrow_down:   :left_right_arrow: |
-| Apr 09 | `2c4e113` | 6.71 | 22.93 | 13.20 | 23.80 | 0.89 | 210.35 | 62.16 | 14.71 | N/A | 206.54 | -- |
+| Apr 10 | `5638d40` | 6.68 | 22.78 | 13.16 | 23.76 | 0.88 | 209.41 | 62.16 | 14.21 | N/A | 204.58 | -- |
 
 > [!CAUTION]
 > **Action Required — Performance Alert**
